@@ -12,7 +12,9 @@ import com.mding.chatfeng.base_common.components.base.about_swipback.BGASwipeBac
 import com.mding.chatfeng.base_common.utils.about_immersive.StatusBarUtil;
 import com.mding.chatfeng.base_common.utils.aboutsystem.AppManager;
 
-
+/**
+ * BaseActivity
+ */
 public class BaseActivity extends BaseActivityForResult  implements BGASwipeBackHelper.Delegate,View.OnClickListener {
 
     @Override
