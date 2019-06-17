@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/white"
+    android:id="@+id/msg_lin_top">
+
+    <!--<com.mding.chatfeng.base_common.utils.about_custom.about_top_bar.FragmentTopBarLayout-->
+        <!--android:id="@+id/fg_top_bar"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--/>-->
+
+    <!--切换列表-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <!--无网络的布局显示-->
+        <LinearLayout
+            android:id="@+id/frag_home_lin_net"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/dp10"
+            android:visibility="gone"
+            android:background="@color/no_net_bac"
+            >
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:srcCompat="@drawable/no_net"
+                android:layout_marginLeft="@dimen/dp5"
+                android:layout_gravity="center_vertical"
+                />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="网络不给力，请检查网络设置"
+                android:textSize="@dimen/sp14"
+                android:layout_marginLeft="@dimen/dp5"
+                android:textColor="@color/grey333"
+                android:layout_weight="1"/>
+
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/frag_home_lin_no_msg"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:visibility="gone"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/msg_fragment_no_msg" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/no_msg"
+                android:textSize="@dimen/sp12"
+                android:layout_marginTop="@dimen/dp15"
+                android:textColor="@color/grey999"/>
+        </LinearLayout>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:descendantFocusability="blocksDescendants">
+
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/frag_home_recyc"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:fadingEdge="none"
+                />
+        </RelativeLayout>
+    </LinearLayout>
+
+</LinearLayout>

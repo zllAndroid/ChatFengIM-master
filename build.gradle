@@ -1,0 +1,60 @@
+// Top-level build file where you can add configuration options common to all sub-projects/modules.
+buildscript {
+
+    repositories {
+        maven{ url rootProject.file("repo-local") }
+        maven{ url 'http://maven.aliyun.com/nexus/content/groups/public/'}
+        google()
+        jcenter()
+    }
+    dependencies {
+        classpath 'com.android.tools.build:gradle:3.0.1'
+//        classpath 'com.jakewharton:butterknife-gradle-plugin:8.4.0'
+//        classpath 'com.jfrog.bintray.gradle:gradle-bintray-plugin:1.8.0'
+//        classpath 'com.github.dcendents:android-maven-gradle-plugin:1.5'
+        classpath 'com.billy.android:cc-register:1.1.1'
+        classpath 'org.greenrobot:greendao-gradle-plugin:3.2.2' // add plugin
+        classpath "io.realm:realm-gradle-plugin:5.9.1"
+
+        // NOTE: Do not place your application dependencies here; they belong
+
+    }
+
+}
+
+allprojects {
+    repositories {
+        maven{ url rootProject.file("repo-local") }
+        maven { url "https://jitpack.io" }
+        google()
+        jcenter()
+    }
+}
+
+
+
+task clean(type: Delete) {
+    delete rootProject.buildDir
+
+}
+
+
+ext {
+
+    buildToolsVersion = "28.0.3"
+    minSdkVersion = 18
+    targetSdkVersion = 28
+    compileSdkVersion = 28
+    appcompatVersion= '1.1.0-alpha04'
+    materialVersion='1.1.0-alpha05'
+    annotationVersion='1.1.0-beta01'
+    butterknifeVersion = '10.1.0'
+    supportVersion = '28.0.0'
+
+    deps = [
+            cc: 'com.billy.android:cc:2.1.5'
+//        cc       : project(':cc')
+    ]
+
+}
+

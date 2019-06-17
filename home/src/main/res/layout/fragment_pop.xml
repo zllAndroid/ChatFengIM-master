@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@drawable/bg_pop_add"
+    android:orientation="vertical">
+
+
+        <TextView
+            android:id="@+id/fp_tv_qunliao"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="@dimen/dp10"
+            android:paddingBottom="@dimen/dp5"
+            android:gravity="center"
+            android:layout_weight="1"
+            android:layout_gravity="center"
+            android:text="@string/home_pop_create_new_group"
+            android:textSize="@dimen/sp14" />
+        <View
+            style="@style/style_wei_line_pop"
+            />
+
+        <TextView
+            android:id="@+id/fp_tv_add"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_weight="1"
+            android:paddingTop="@dimen/dp5"
+            android:paddingBottom="@dimen/dp5"
+            android:layout_gravity="center"
+            android:text="@string/home_pop_add_friend_or_group"
+            android:textSize="@dimen/sp14" />
+        <View
+            style="@style/style_wei_line_pop"
+            />
+        <TextView
+            android:id="@+id/fp_tv_scan"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_weight="1"
+            android:layout_gravity="center"
+            android:paddingTop="@dimen/dp5"
+            android:paddingBottom="@dimen/dp5"
+            android:text="@string/home_pop_scan"
+            android:textSize="@dimen/sp14" />
+
+        <View
+            style="@style/style_wei_line"
+            android:layout_height="@dimen/dp5"
+            android:background="@color/trans"
+            />
+
+</LinearLayout>

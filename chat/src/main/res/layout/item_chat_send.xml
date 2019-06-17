@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:paddingTop="@dimen/dp5">
+
+    <TextView
+        android:id="@+id/chat_item_date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/chat_btn_stroke_nor"
+        android:textColor="@color/white"
+        android:textSize="12sp"
+        android:padding="5dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:layout_margin="@dimen/dp5"
+        />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingRight="@dimen/dp5"
+        android:paddingLeft="@dimen/dp50"
+        >
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            >
+            <LinearLayout
+                android:id="@+id/chat_item_lin_header"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                >
+                <com.rance.chatui.CircleImageView
+                    android:id="@+id/chat_item_header"
+                    android:layout_width="@dimen/dp40"
+                    android:layout_height="@dimen/dp40"
+
+                    />
+            </LinearLayout>
+
+
+            <RelativeLayout
+                android:id="@+id/chat_item_layout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_toLeftOf="@+id/chat_item_lin_header"
+                android:layout_marginRight="@dimen/dp40"
+                >
+                <!--android:layout_toLeftOf="@id/chat_item_header"-->
+                <!--<com.rance.chatui.util.about_bubbleimageview.BubbleImageView-->
+                    <!--android:id="@+id/chat_item_by_image"-->
+                    <!--android:layout_width="60dp"-->
+                    <!--android:layout_height="70dp"-->
+                   <!--/>-->
+                <!--<com.rance.chatui.widget.BubbleImageView-->
+                    <!--android:id="@+id/chat_item_content_image"-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:adjustViewBounds="true"-->
+                    <!--app:angle="6dp"-->
+                    <!--app:arrowHeight="8dp"-->
+                    <!--android:visibility="gone"-->
+                    <!--app:arrowLocation="right"-->
+                    <!--app:arrowPosition="15dp"-->
+                    <!--app:arrowWidth="10dp" />-->
+                <ImageView
+                    android:id="@+id/chat_item_content_image"
+                    android:layout_width="80dp"
+                    android:layout_height="100dp"
+                    android:adjustViewBounds="true"
+                    android:layout_marginBottom="5dp"
+                    />
+                <LinearLayout
+                    android:id="@+id/chat_item_layout_content"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="right|center_vertical"
+                    android:orientation="horizontal"
+                    android:padding="@dimen/content_vertical_margin"
+                    android:background="@mipmap/chatto_bg_normal">
+
+                    <com.rance.chatui.widget.GifTextView
+                        android:id="@+id/chat_item_content_text"
+                        style="@style/text_subhead_black"
+                        android:layout_marginRight="@dimen/content_horizontal_margin"
+                        android:textColor="@color/gr333" />
+
+                    <ImageView
+                        android:id="@+id/chat_item_voice"
+                        android:layout_width="18dp"
+                        android:layout_height="18dp"
+                        android:layout_marginRight="72dp"
+                        android:src="@mipmap/icon_voice_right3"
+                        android:scaleType="fitCenter"
+                        android:visibility="gone" />
+                </LinearLayout>
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/chat_item_voice_time"
+                style="@style/text_body"
+                android:visibility="gone"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="@dimen/content_vertical_margin"
+                android:layout_toLeftOf="@+id/chat_item_layout" />
+
+            <ImageView
+                android:id="@+id/chat_item_fail"
+                android:layout_width="18dp"
+                android:layout_height="18dp"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="@dimen/content_vertical_margin"
+                android:layout_toLeftOf="@+id/chat_item_voice_time"
+                android:src="@drawable/msg_state_fail_resend"
+                android:focusable="false"
+                android:visibility="gone" />
+
+            <ProgressBar
+                android:id="@+id/chat_item_progress"
+                style="@android:style/Widget.ProgressBar.Small.Inverse"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="@dimen/content_vertical_margin"
+                android:layout_toLeftOf="@+id/chat_item_voice_time"
+                android:visibility="gone" />
+        </RelativeLayout>
+
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,63 @@
+apply plugin: 'com.android.library'
+//apply from: rootProject.file('cc-settings-2.gradle')
+apply plugin: 'realm-android'
+realm {
+    syncEnabled = true
+}
+android {
+//    packagingOptions {
+//        exclude "lib/arm64-v8a/librealm-jni.so"
+//    }
+    //noinspection GradleCompatible
+    compileSdkVersion 28
+
+    defaultConfig {
+        minSdkVersion 18
+        targetSdkVersion 28
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+
+
+}
+dependencies {
+    api rootProject.ext.deps.cc
+//    androidTestImplementation('com.android.support.test.espresso:espresso-core:2.2.2', {
+//        exclude group: 'com.android.support', module: 'support-annotations'
+//        exclude module: 'support-v4'
+//        exclude group: 'com.android.support'
+////        exclude group: 'org.greenrobot:eventbus:3.1.1'
+//        exclude group: 'okio'
+//    })
+    implementation 'com.squareup.okhttp3:okhttp:3.1.2'
+    implementation 'com.squareup.retrofit2:retrofit:2.5.0'
+    implementation 'com.squareup.retrofit2:retrofit-adapters:2.5.0'
+    implementation 'com.squareup.retrofit2:converter-gson:2.0.1'
+    implementation "io.reactivex.rxjava2:rxjava:2.2.9"
+
+    implementation 'com.google.code.gson:gson:2.8.4'
+    api 'com.tonystark.android:socket:latest.release'
+
+    implementation 'com.android.support:appcompat-v7:28.0.0'
+
+//    implementation 'com.android.support:support-v4:28.0.0'
+    //    Glide
+    implementation 'com.github.bumptech.glide:glide:3.7.0'
+    implementation 'jp.wasabeef:glide-transformations:2.0.1'
+    //二维码
+    implementation files('libs/zxing.jar')
+    implementation 'com.github.CymChad:BaseRecyclerViewAdapterHelper:2.9.22'
+    //    eventbus
+    implementation 'org.greenrobot:eventbus:3.1.1'
+//    动态权限
+//    implementation 'site.gemus:openingstartanimation:1.0.0' //在gradle中导入项目
+//    implementation 'com.github.hotchemi:permissionsdispatcher:2.3.1'
+//    annotationProcessor 'com.github.hotchemi:permissionsdispatcher-processor:2.3.1'
+}

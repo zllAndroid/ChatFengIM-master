@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/group_lin_notice"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="@drawable/group_notice"
+    android:layout_margin="@dimen/dp5"
+
+    android:gravity="center">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_marginTop="20dp"
+        android:padding="40dp"
+        >
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="群公告："
+            android:textSize="18sp"
+            />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="今日从财政部证实，财政部会同国家医保局成立部际协调工作组，将开展医药行业会计信息质量检查工作，77家企业被列入稽查检查名单。财监（2019）第18号加急文件显示，包括赛诺菲、施贵宝等国际知名药企和复星医药、恒瑞医药、步长制药、上海医药等A股多家上市药企都在该份检查名单中。"
+            android:textSize="14sp"
+            android:maxLines="3"
+            android:ellipsize="end"
+            android:layout_margin="10dp"
+            />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="2019-06-06"
+            android:gravity="right"
+            android:textSize="12sp"
+            />
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="GradleSettings">
+    <option name="linkedExternalProjectsSettings">
+      <GradleProjectSettings>
+        <option name="distributionType" value="DEFAULT_WRAPPED" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="modules">
+          <set>
+            <option value="$PROJECT_DIR$" />
+            <option value="$PROJECT_DIR$/base_common" />
+            <option value="$PROJECT_DIR$/base_db" />
+            <option value="$PROJECT_DIR$/base_interceptor" />
+            <option value="$PROJECT_DIR$/chat" />
+            <option value="$PROJECT_DIR$/chat_details" />
+            <option value="$PROJECT_DIR$/chat_media" />
+            <option value="$PROJECT_DIR$/chat_redbag" />
+            <option value="$PROJECT_DIR$/chat_videocall" />
+            <option value="$PROJECT_DIR$/chat_web" />
+            <option value="$PROJECT_DIR$/friends" />
+            <option value="$PROJECT_DIR$/friends_contents" />
+            <option value="$PROJECT_DIR$/home" />
+            <option value="$PROJECT_DIR$/login" />
+            <option value="$PROJECT_DIR$/start" />
+            <option value="$PROJECT_DIR$/wallet" />
+            <option value="$PROJECT_DIR$/wallet_transfer" />
+          </set>
+        </option>
+        <option name="resolveModulePerSourceSet" value="false" />
+      </GradleProjectSettings>
+    </option>
+  </component>
+</project>

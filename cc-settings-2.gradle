@@ -1,0 +1,144 @@
+//注： 从CC 1.x升级到CC 2.x的用户，用此文件替换原来的cc-settings.gradle的同时，需要在根目录build.gradle中将插件地址按照如下方式更换一下：
+// classpath 'com.billy.android:autoregister:x.x.x' -> classpath 'com.billy.android:cc-register:x.x.x'
+//cc-register extension:
+// 功能介绍：
+//  完成组件、拦截器及跨进程json解释器等CC库自身需要的自动注册功能
+//  支持新增自定义的其它自动注册功能，参考AutoRegister，用法参考cc-settings-demo.gradle
+project.apply plugin: 'cc-register'
+def dependencyMode = GradleVersion.version(project.gradle.gradleVersion) >= GradleVersion.version('4.1') ? 'api' : 'compile'
+project.dependencies.add(dependencyMode, "com.billy.android:cc:2.1.5") //用最新版
+//apply plugin: 'com.jakewharton.butterknife'
+
+//android {
+//    packagingOptions {
+//        exclude "lib/arm64-v8a/librealm-jni.so"
+//    }
+//}
+dependencies {
+    androidTestImplementation('com.android.support.test.espresso:espresso-core:2.2.2', {
+        exclude group: 'com.android.support', module: 'support-annotations'
+//        exclude module: 'support-v4'
+//        exclude group: 'org.greenrobot:eventbus:3.1.1'
+        exclude group: 'okio'
+    })
+//    implementation 'com.android.support:appcompat-v7:28.0.0'
+//    implementation 'com.android.support.constraint:constraint-layout:1.1.3'
+//    implementation 'com.uphyca:stetho_realm:2.2.2'
+    implementation project(':base_common')
+    implementation 'com.android.support:appcompat-v7:28.0.0'
+    implementation 'com.android.support:design:28.0.0'
+    implementation 'com.android.support:support-v4:28.0.0'
+//    implementation 'com.jakewharton:butterknife:8.4.0'
+//    annotationProcessor 'com.jakewharton:butterknife-compiler:8.4.0'
+
+//    动态权限
+    implementation 'site.gemus:openingstartanimation:1.0.0' //在gradle中导入项目
+    implementation 'com.github.hotchemi:permissionsdispatcher:2.3.1'
+    annotationProcessor 'com.github.hotchemi:permissionsdispatcher-processor:2.3.1'
+
+
+    implementation 'com.github.CymChad:BaseRecyclerViewAdapterHelper:2.9.22'
+    //    eventbus
+    implementation 'org.greenrobot:eventbus:3.1.1'
+
+    implementation 'com.ogaclejapan.smarttablayout:library:1.6.1@aar'
+
+    //switchbutton
+    implementation 'com.github.zcweng:switch-button:0.0.3@aar'
+
+    implementation 'com.jude:easyrecyclerview:4.2.3'
+    //    eventbus
+//    implementation 'org.greenrobot:eventbus:3.1.1'
+    //2018-06-03新增：这里是为了示例添加全局拦截器
+    if (project.ext.has('runAsApp') && project.ext.runAsApp) {
+        //说明：需要兼容的情况有3种(单独组件作为app运行、打包在主app内、组件在多个app上复用但全局拦截器不同)
+        //     为了兼容以上3种情况，建议将全局拦截器作为一个单独的module，在此处给不同app添加不同拦截器module
+//        implementation project(':base_interceptor')
+    }
+}
+//此文件是作为组件化配置的公共gradle脚本文件，在每个组件中都apply此文件，下载到工程根目录后，可以在下方添加一些自己工程中通用的配置
+// 可参考cc-settings-demo.gradle
+// 例如：
+//      1. 添加全局拦截器、下沉的公共类库等一些公共基础库的依赖；
+//      2. 添加自定义的通过cc-register实现的自动注册配置
+//      3. 开启app内部多进程支持
+//      4. 其它公共配置信息
+
+
+
+//开启app内部多进程组件调用时，可以启用下方的配置排除一些进程
+//ccregister.excludeProcessNames = [':pushservice', ':processNameB']
+
+//按照如下格式添加自定义注册项，可添加多个（也可每次add一个，add多次）
+// 文档地址： https://luckybilly.github.io/CC-website/#/manual-IActionProcessor
+
+//登入使用的相关批量组件
+ccregister.registerInfo.add([
+        //在自动注册组件的基础上增加：自动注册组件B的processor
+        'scanInterface'             : 'com.mding.chatfeng.login.components.task.IActionProcessor'
+        , 'codeInsertToClassName'   : 'com.mding.chatfeng.login.components.IC_CheckLogin'
+        , 'codeInsertToMethodName'  : 'initProcessors'
+        , 'registerMethodName'      : 'add'
+])
+
+
+//OkSocket
+ccregister.registerInfo.add([
+        //在自动注册组件的基础上增加：自动注册组件B的processor
+        'scanInterface'             : 'com.mding.chatfeng.socket.components.task.IActionProcessor'
+        , 'codeInsertToClassName'   : 'com.mding.chatfeng.socket.components.IC_Socket'
+        , 'codeInsertToMethodName'  : 'initProcessors'
+        , 'registerMethodName'      : 'add'
+])
+
+//推送组件入口
+ccregister.registerInfo.add([
+        //在自动注册组件的基础上增加：自动注册组件B的processor
+        'scanInterface'             : 'com.mding.chatfeng.base_common.components.myamqp.IA_Amqp'
+        , 'codeInsertToClassName'   : 'com.mding.chatfeng.base_common.components.myamqp.IC_Amqp'
+        , 'codeInsertToMethodName'  : 'initProcessors'
+        , 'registerMethodName'      : 'add'
+])
+
+//登入组件入口
+ccregister.registerInfo.add([
+        //在自动注册组件的基础上增加：自动注册组件B的processor
+        'scanInterface'             : 'com.mding.chatfeng.base_common.components.contact.IA_Contact'
+        , 'codeInsertToClassName'   : 'com.mding.chatfeng.base_common.components.contact.IC_Contact'
+        , 'codeInsertToMethodName'  : 'initProcessors'
+        , 'registerMethodName'      : 'add'
+])
+
+//联系人组件入口
+ccregister.registerInfo.add([
+        //在自动注册组件的基础上增加：自动注册组件B的processor
+        'scanInterface'             : 'com.mding.chatfeng.base_common.components.login.IA_Login'
+        , 'codeInsertToClassName'   : 'com.mding.chatfeng.base_common.components.login.IC_Login'
+        , 'codeInsertToMethodName'  : 'initProcessors'
+        , 'registerMethodName'      : 'add'
+])
+
+
+
+//个人组件入口
+ccregister.registerInfo.add([
+        //在自动注册组件的基础上增加：自动注册组件B的processor
+        'scanInterface'             : 'com.mding.chatfeng.base_common.components.person.IA_Person'
+        , 'codeInsertToClassName'   : 'com.mding.chatfeng.base_common.components.person.IC_Person'
+        , 'codeInsertToMethodName'  : 'initProcessors'
+        , 'registerMethodName'      : 'add'
+])
+
+//公共组件访问入口
+ccregister.registerInfo.add([
+        //在自动注册组件的基础上增加：自动注册组件B的processor
+        'scanInterface'             : 'com.mding.chatfeng.base_common.components.common.IA_Common'
+        , 'codeInsertToClassName'   : 'com.mding.chatfeng.base_common.components.common.IC_Common'
+        , 'codeInsertToMethodName'  : 'initProcessors'
+        , 'registerMethodName'      : 'add'
+])
+
+
+//开启app内部多进程组件调用时启用下面这行代码
+//文档地址：https://luckybilly.github.io/CC-website/#/manual-multi-process
+ccregister.multiProcessEnabled = true

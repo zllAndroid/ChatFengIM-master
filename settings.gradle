@@ -1,0 +1,1 @@
+include ':chat', ':login', ':start', ':home', ':chat_web', ':chat_redbag', ':wallet', ':wallet_transfer', ':friends', ':friends_contents',  ':chat_media', ':chat_videocall', ':chat_details', ':base_common', ':base_db', ':base_interceptor'

@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">信风CC框架</string>
+    <string name="show_login_user">当前登录用户: %s</string>
+    <string name="observe_login_user">添加动态组件</string>
+</resources>

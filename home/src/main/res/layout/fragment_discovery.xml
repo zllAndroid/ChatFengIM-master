@@ -1,0 +1,503 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:background="@color/greyf3"
+   >
+    <!--title bar-->
+    <!--<include layout="@layout/fragment_include_title_bar"/>-->
+
+    <!--<include layout="@layout/fragment_include_title_bar"/>-->
+    <!--朋友圈-->
+    <!--<com.mding.chatfeng.base_common.utils.about_custom.about_top_bar.FragmentTopBarLayout-->
+        <!--android:id="@+id/fg_top_bar"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--/>-->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="none"
+        >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+            <!--朋友圈-->
+            <com.mding.chatfeng.base_common.utils.about_custom.about_linearlayout.CusLinearLayout
+                android:id="@+id/discover_lin_friendcircle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"/>
+            <!--<LinearLayout-->
+                <!--android:id="@+id/discover_lin_friendcircle"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:gravity="center_vertical"-->
+                <!--android:background="@color/white"-->
+                <!--android:orientation="horizontal">-->
+                <!--<ImageView-->
+                    <!--android:layout_width="@dimen/dp20"-->
+                    <!--android:layout_height="@dimen/dp20"-->
+                    <!--android:layout_marginLeft="@dimen/dp10"-->
+                    <!--app:srcCompat="@drawable/discover_friendcircle"/>-->
+                <!--<TextView-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:layout_weight="1"-->
+                    <!--android:padding="@dimen/dp10"-->
+                    <!--android:text="朋友圈" />-->
+                <!--<ImageView-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:padding="@dimen/dp10"-->
+                    <!--app:srcCompat="@drawable/in_right" />-->
+            <!--</LinearLayout>-->
+            <!--宠物-->
+            <LinearLayout
+                android:id="@+id/find_fuhua"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:orientation="vertical">
+                <!--宠物孵化基地-->
+                <com.mding.chatfeng.base_common.utils.about_custom.about_linearlayout.CusLinearLayout
+                    android:id="@+id/discover_lin_animal_fuhua"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"/>
+                <!--<LinearLayout-->
+                    <!--android:id="@+id/discover_lin_animal_fuhua"-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:gravity="center_vertical"-->
+                    <!--android:orientation="horizontal">-->
+                    <!--<ImageView-->
+                        <!--android:layout_width="@dimen/dp20"-->
+                        <!--android:layout_height="@dimen/dp20"-->
+                        <!--android:layout_marginLeft="@dimen/dp10"-->
+                        <!--app:srcCompat="@drawable/discover_animal_fuhua"/>-->
+                    <!--<TextView-->
+                        <!--android:layout_width="wrap_content"-->
+                        <!--android:layout_height="wrap_content"-->
+                        <!--android:layout_weight="1"-->
+                        <!--android:padding="@dimen/dp10"-->
+                        <!--android:text="宠物孵化基地" />-->
+                    <!--<ImageView-->
+                        <!--android:layout_width="wrap_content"-->
+                        <!--android:layout_height="wrap_content"-->
+                        <!--android:padding="@dimen/dp10"-->
+                        <!--app:srcCompat="@drawable/in_right" />-->
+                <!--</LinearLayout>-->
+
+                <!--AI宠物学舌-->
+                <com.mding.chatfeng.base_common.utils.about_custom.about_linearlayout.CusLinearLayout
+                    android:id="@+id/discover_lin_ai"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"/>
+                <!--<View-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:background="@color/greyf3"-->
+                    <!--android:layout_height="@dimen/dp1"-->
+                    <!--/>-->
+                <!--<LinearLayout-->
+                    <!--android:id="@+id/discover_lin_ai"-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:gravity="center_vertical"-->
+                    <!--android:orientation="horizontal">-->
+                    <!--<ImageView-->
+                        <!--android:layout_width="@dimen/dp20"-->
+                        <!--android:layout_height="@dimen/dp20"-->
+                        <!--android:layout_marginLeft="@dimen/dp10"-->
+                        <!--app:srcCompat="@drawable/discover_ai"/>-->
+                    <!--<TextView-->
+                        <!--android:layout_width="wrap_content"-->
+                        <!--android:layout_height="wrap_content"-->
+                        <!--android:layout_weight="1"-->
+                        <!--android:padding="@dimen/dp10"-->
+                        <!--android:text="AI宠物学舌" />-->
+                    <!--<ImageView-->
+                        <!--android:layout_width="wrap_content"-->
+                        <!--android:layout_height="wrap_content"-->
+                        <!--android:padding="@dimen/dp10"-->
+                        <!--app:srcCompat="@drawable/in_right" />-->
+                <!--</LinearLayout>-->
+
+                <!--宠物商城-->
+                <com.mding.chatfeng.base_common.utils.about_custom.about_linearlayout.CusLinearLayout
+                    android:id="@+id/discover_lin_animal_shop"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"/>
+                <!--<View-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:background="@color/greyf3"-->
+                    <!--android:layout_height="@dimen/dp1"-->
+                    <!--/>-->
+                <!--<LinearLayout-->
+                    <!--android:id="@+id/discover_lin_animal_shop"-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:gravity="center_vertical"-->
+                    <!--android:orientation="horizontal">-->
+                    <!--<ImageView-->
+                        <!--android:layout_width="@dimen/dp20"-->
+                        <!--android:layout_height="@dimen/dp20"-->
+                        <!--android:layout_marginLeft="@dimen/dp10"-->
+                        <!--app:srcCompat="@drawable/discover_animal_shop"/>-->
+                    <!--<TextView-->
+                        <!--android:layout_width="wrap_content"-->
+                        <!--android:layout_height="wrap_content"-->
+                        <!--android:layout_weight="1"-->
+                        <!--android:padding="@dimen/dp10"-->
+                        <!--android:text="宠物商城" />-->
+                    <!--<ImageView-->
+                        <!--android:layout_width="wrap_content"-->
+                        <!--android:layout_height="wrap_content"-->
+                        <!--android:padding="@dimen/dp10"-->
+                        <!--app:srcCompat="@drawable/in_right" />-->
+                <!--</LinearLayout>-->
+
+                <!--宠物生涯-->
+                <com.mding.chatfeng.base_common.utils.about_custom.about_linearlayout.CusLinearLayout
+                    android:id="@+id/discover_lin_animal_life"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"/>
+                <!--<View-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:background="@color/greyf3"-->
+                    <!--android:layout_height="@dimen/dp1"-->
+                    <!--/>-->
+                <!--<LinearLayout-->
+                    <!--android:id="@+id/discover_lin_animal_life"-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:gravity="center_vertical"-->
+                    <!--android:orientation="horizontal">-->
+                    <!--<ImageView-->
+                        <!--android:layout_width="@dimen/dp20"-->
+                        <!--android:layout_height="@dimen/dp20"-->
+                        <!--android:layout_marginLeft="@dimen/dp10"-->
+                        <!--app:srcCompat="@drawable/discover_animal_life"/>-->
+                    <!--<TextView-->
+                        <!--android:layout_width="wrap_content"-->
+                        <!--android:layout_height="wrap_content"-->
+                        <!--android:layout_weight="1"-->
+                        <!--android:padding="@dimen/dp10"-->
+                        <!--android:text="宠物生涯" />-->
+                    <!--<ImageView-->
+                        <!--android:layout_width="wrap_content"-->
+                        <!--android:layout_height="wrap_content"-->
+                        <!--android:padding="@dimen/dp10"-->
+                        <!--app:srcCompat="@drawable/in_right" />-->
+                <!--</LinearLayout>-->
+            </LinearLayout>
+            <!--Part 3-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:orientation="vertical">
+                <!--我是预言家-->
+                <com.mding.chatfeng.base_common.utils.about_custom.about_linearlayout.CusLinearLayout
+                    android:id="@+id/discover_lin_yuyanjia"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"/>
+                <!--<LinearLayout-->
+                    <!--android:id="@+id/discover_lin_yuyanjia"-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:gravity="center_vertical"-->
+                    <!--android:orientation="horizontal">-->
+                    <!--<ImageView-->
+                        <!--android:layout_width="@dimen/dp20"-->
+                        <!--android:layout_height="@dimen/dp20"-->
+                        <!--android:layout_marginLeft="@dimen/dp10"-->
+                        <!--app:srcCompat="@drawable/discover_yuyanjia"/>-->
+                    <!--<TextView-->
+                        <!--android:layout_width="wrap_content"-->
+                        <!--android:layout_height="wrap_content"-->
+                        <!--android:layout_weight="1"-->
+                        <!--android:padding="@dimen/dp10"-->
+                        <!--android:text="我是预言家" />-->
+                    <!--<ImageView-->
+                        <!--android:layout_width="wrap_content"-->
+                        <!--android:layout_height="wrap_content"-->
+                        <!--android:padding="@dimen/dp10"-->
+                        <!--app:srcCompat="@drawable/in_right" />-->
+                <!--</LinearLayout>-->
+
+                <!--世界告白墙-->
+                <com.mding.chatfeng.base_common.utils.about_custom.about_linearlayout.CusLinearLayout
+                    android:id="@+id/discover_lin_gaoBaiQiang"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"/>
+                <!--<View-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:background="@color/greyf3"-->
+                    <!--android:layout_height="@dimen/dp1"-->
+                    <!--/>-->
+                <!--<LinearLayout-->
+                    <!--android:id="@+id/discover_lin_gaoBaiQiang"-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:gravity="center_vertical"-->
+                    <!--android:orientation="horizontal">-->
+                    <!--<ImageView-->
+                        <!--android:layout_width="@dimen/dp20"-->
+                        <!--android:layout_height="@dimen/dp20"-->
+                        <!--android:layout_marginLeft="@dimen/dp10"-->
+                        <!--app:srcCompat="@drawable/discover_gaobai"/>-->
+                    <!--<TextView-->
+                        <!--android:layout_width="wrap_content"-->
+                        <!--android:layout_height="wrap_content"-->
+                        <!--android:layout_weight="1"-->
+                        <!--android:padding="@dimen/dp10"-->
+                        <!--android:text="世界告白墙" />-->
+                    <!--<ImageView-->
+                        <!--android:layout_width="wrap_content"-->
+                        <!--android:layout_height="wrap_content"-->
+                        <!--android:padding="@dimen/dp10"-->
+                        <!--app:srcCompat="@drawable/in_right" />-->
+                <!--</LinearLayout>-->
+
+                <!--吱一吱，加好友-->
+                <com.mding.chatfeng.base_common.utils.about_custom.about_linearlayout.CusLinearLayout
+                    android:id="@+id/discover_lin_zhi_addFriend"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"/>
+                <!--<View  style="@style/style_wei_line" />-->
+                <!--<LinearLayout-->
+                    <!--android:id="@+id/discover_lin_zhi_addFriend"-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:gravity="center_vertical"-->
+                    <!--android:orientation="horizontal">-->
+                    <!--<ImageView-->
+                        <!--android:layout_width="@dimen/dp20"-->
+                        <!--android:layout_height="@dimen/dp20"-->
+                        <!--android:layout_marginLeft="@dimen/dp10"-->
+                        <!--app:srcCompat="@drawable/discover_zhi_addfriend"/>-->
+                    <!--<TextView-->
+                        <!--android:layout_width="wrap_content"-->
+                        <!--android:layout_height="wrap_content"-->
+                        <!--android:layout_weight="1"-->
+                        <!--android:padding="@dimen/dp10"-->
+                        <!--android:text="吱一吱，加好友" />-->
+                    <!--<ImageView-->
+                        <!--android:layout_width="wrap_content"-->
+                        <!--android:layout_height="wrap_content"-->
+                        <!--android:padding="@dimen/dp10"-->
+                        <!--app:srcCompat="@drawable/in_right" />-->
+                <!--</LinearLayout>-->
+
+                <!--应用商城-->
+                <com.mding.chatfeng.base_common.utils.about_custom.about_linearlayout.CusLinearLayout
+                    android:id="@+id/discover_lin_app_store"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"/>
+                <!--<View-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:background="@color/greyf3"-->
+                    <!--android:layout_height="@dimen/dp1"-->
+                    <!--/>-->
+                <!--<LinearLayout-->
+                    <!--android:id="@+id/discover_lin_app_store"-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:gravity="center_vertical"-->
+                    <!--android:orientation="horizontal">-->
+                    <!--<ImageView-->
+                        <!--android:layout_width="@dimen/dp20"-->
+                        <!--android:layout_height="@dimen/dp20"-->
+                        <!--android:layout_marginLeft="@dimen/dp10"-->
+                        <!--app:srcCompat="@drawable/discover_shop"/>-->
+                    <!--<TextView-->
+                        <!--android:layout_width="wrap_content"-->
+                        <!--android:layout_height="wrap_content"-->
+                        <!--android:layout_weight="1"-->
+                        <!--android:padding="@dimen/dp10"-->
+                        <!--android:text="应用商城" />-->
+                    <!--<ImageView-->
+                        <!--android:layout_width="wrap_content"-->
+                        <!--android:layout_height="wrap_content"-->
+                        <!--android:padding="@dimen/dp10"-->
+                        <!--app:srcCompat="@drawable/in_right" />-->
+                <!--</LinearLayout>-->
+            </LinearLayout>
+            <!--Part 4-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:orientation="vertical">
+                <!--中国好音乐-->
+                <com.mding.chatfeng.base_common.utils.about_custom.about_linearlayout.CusLinearLayout
+                    android:id="@+id/discover_lin_music"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"/>
+                <!--<LinearLayout-->
+                    <!--android:id="@+id/discover_lin_music"-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:gravity="center_vertical"-->
+                    <!--android:orientation="horizontal">-->
+                    <!--<ImageView-->
+                        <!--android:layout_width="@dimen/dp20"-->
+                        <!--android:layout_height="@dimen/dp20"-->
+                        <!--android:layout_marginLeft="@dimen/dp10"-->
+                        <!--app:srcCompat="@drawable/discover_music"/>-->
+                    <!--<TextView-->
+                        <!--android:layout_width="wrap_content"-->
+                        <!--android:layout_height="wrap_content"-->
+                        <!--android:layout_weight="1"-->
+                        <!--android:padding="@dimen/dp10"-->
+                        <!--android:text="中国好音乐" />-->
+                    <!--<ImageView-->
+                        <!--android:layout_width="wrap_content"-->
+                        <!--android:layout_height="wrap_content"-->
+                        <!--android:padding="@dimen/dp10"-->
+                        <!--app:srcCompat="@drawable/in_right" />-->
+                <!--</LinearLayout>-->
+
+                <!--周周试用免单-->
+                <com.mding.chatfeng.base_common.utils.about_custom.about_linearlayout.CusLinearLayout
+                    android:id="@+id/discover_lin_shiYong"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"/>
+                <!--<View-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:background="@color/greyf3"-->
+                    <!--android:layout_height="@dimen/dp1"-->
+                    <!--/>-->
+                <!--<LinearLayout-->
+                    <!--android:id="@+id/discover_lin_shiYong"-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:gravity="center_vertical"-->
+                    <!--android:orientation="horizontal">-->
+                    <!--<ImageView-->
+                        <!--android:layout_width="@dimen/dp20"-->
+                        <!--android:layout_height="@dimen/dp20"-->
+                        <!--android:layout_marginLeft="@dimen/dp10"-->
+                        <!--app:srcCompat="@drawable/discover_shiyong"/>-->
+                    <!--<TextView-->
+                        <!--android:layout_width="wrap_content"-->
+                        <!--android:layout_height="wrap_content"-->
+                        <!--android:layout_weight="1"-->
+                        <!--android:padding="@dimen/dp10"-->
+                        <!--android:text="周周试用免单" />-->
+                    <!--<ImageView-->
+                        <!--android:layout_width="wrap_content"-->
+                        <!--android:layout_height="wrap_content"-->
+                        <!--android:padding="@dimen/dp10"-->
+                        <!--app:srcCompat="@drawable/in_right" />-->
+                <!--</LinearLayout>-->
+
+                <!--防伪溯源鉴定-->
+                <com.mding.chatfeng.base_common.utils.about_custom.about_linearlayout.CusLinearLayout
+                    android:id="@+id/discover_lin_fangWei"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"/>
+                <!--<View-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:background="@color/greyf3"-->
+                    <!--android:layout_height="@dimen/dp1"-->
+                    <!--/>-->
+                <!--<LinearLayout-->
+                    <!--android:id="@+id/discover_lin_fangWei"-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:gravity="center_vertical"-->
+                    <!--android:orientation="horizontal">-->
+                    <!--<ImageView-->
+                        <!--android:layout_width="@dimen/dp20"-->
+                        <!--android:layout_height="@dimen/dp20"-->
+                        <!--android:layout_marginLeft="@dimen/dp10"-->
+                        <!--app:srcCompat="@drawable/discover_fangwei"/>-->
+                    <!--<TextView-->
+                        <!--android:layout_width="wrap_content"-->
+                        <!--android:layout_height="wrap_content"-->
+                        <!--android:layout_weight="1"-->
+                        <!--android:padding="@dimen/dp10"-->
+                        <!--android:text="防伪溯源鉴定" />-->
+                    <!--<ImageView-->
+                        <!--android:layout_width="wrap_content"-->
+                        <!--android:layout_height="wrap_content"-->
+                        <!--android:padding="@dimen/dp10"-->
+                        <!--app:srcCompat="@drawable/in_right" />-->
+                <!--</LinearLayout>-->
+
+                <!--广告墙-->
+                <com.mding.chatfeng.base_common.utils.about_custom.about_linearlayout.CusLinearLayout
+                    android:id="@+id/discover_lin_guangGao"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"/>
+                <!--<View-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:background="@color/greyf3"-->
+                    <!--android:layout_height="@dimen/dp1"-->
+                    <!--/>-->
+                <!--<LinearLayout-->
+                    <!--android:id="@+id/discover_lin_guangGao"-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:gravity="center_vertical"-->
+                    <!--android:orientation="horizontal">-->
+                    <!--<ImageView-->
+                        <!--android:layout_width="@dimen/dp20"-->
+                        <!--android:layout_height="@dimen/dp20"-->
+                        <!--android:layout_marginLeft="@dimen/dp10"-->
+                        <!--app:srcCompat="@drawable/discover_guanggao"/>-->
+                    <!--<TextView-->
+                        <!--android:layout_width="wrap_content"-->
+                        <!--android:layout_height="wrap_content"-->
+                        <!--android:layout_weight="1"-->
+                        <!--android:padding="@dimen/dp10"-->
+                        <!--android:text="广告墙" />-->
+                    <!--<ImageView-->
+                        <!--android:layout_width="wrap_content"-->
+                        <!--android:layout_height="wrap_content"-->
+                        <!--android:padding="@dimen/dp10"-->
+                        <!--app:srcCompat="@drawable/in_right" />-->
+                <!--</LinearLayout>-->
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+    <!--RecycleView-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/grayeee"
+        android:orientation="vertical">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:descendantFocusability="blocksDescendants">
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/discover_recyc"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:fadingEdge="none"
+                />
+        </RelativeLayout>
+    </LinearLayout>
+
+</LinearLayout>
