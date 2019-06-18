@@ -53,11 +53,7 @@ public class BaseFragment extends Fragment  implements View.OnClickListener{
 	@Override
 	public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
 //		if (view == null)
-		try {
 			view = inflater.inflate(setFragmentLayout(), container, false);
-		} catch (Exception e) {
-			e.printStackTrace();
-		}
 
 		initBaseUI(view);
 		initTopBarEvent();

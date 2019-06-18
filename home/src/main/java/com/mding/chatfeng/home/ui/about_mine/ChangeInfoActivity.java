@@ -79,7 +79,6 @@ public class ChangeInfoActivity extends BaseActivity implements ChangeInfoWindow
     private String imageBase64;
     public static String NICK_NAME = "nickName";
     ACache aCache;
-
     @Override
     protected int getLayoutView() {
         return R.layout.activity_changeinfo;

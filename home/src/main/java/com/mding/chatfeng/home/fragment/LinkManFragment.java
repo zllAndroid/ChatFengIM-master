@@ -7,6 +7,7 @@ import android.support.v4.app.FragmentPagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.view.View;
 
+import com.mding.chatfeng.base_common.components.base.BaseApplication;
 import com.mding.chatfeng.base_common.utils.about_custom.CustomViewPager;
 import com.mding.chatfeng.home.BaseFragment;
 import com.mding.chatfeng.home.R;
@@ -60,7 +61,7 @@ public class LinkManFragment extends BaseFragment {
 //        getData()
         mSmartTab = mView.findViewById(R.id.contacts_viewpagertab);
         mViewpager = mView.findViewById(R.id.contacts_viewpager);
-        mSmartTab.setViewPager(mViewpager);
+//        mSmartTab.setViewPager(mViewpager);
 //        initData();
         initViewPagerAdapter();
     }
@@ -71,16 +72,18 @@ public class LinkManFragment extends BaseFragment {
         mStr.add(getResources().getString(R.string.contacts_friend));
         mStr.add(getResources().getString(R.string.contacts_group));
     }
+    private String[]  title = new String[]{BaseApplication.getAppContext().getResources().getString(R.string.contacts_friend), BaseApplication.getAppContext().getResources().getString(R.string.contacts_group)};
+
     private void initViewPagerAdapter() {
 //        myPagerAdapter = new MyPagerAdapter(getChildFragmentManager());
-        String[] title = getResources().getStringArray(R.array.linkman_top_name);
-        if (myPagerAdapter==null) {
-                myPagerAdapter = new MyPagerAdapter(getActivity().getSupportFragmentManager(), title);
-        }
+//        String[] title = getResources().getStringArray(R.array.linkman_top_name);
+//        if (myPagerAdapter==null) {
+//        }
+        myPagerAdapter = new MyPagerAdapter(getChildFragmentManager());
         mViewpager.setAdapter(myPagerAdapter);
         mSmartTab.setViewPager(mViewpager);
         if (ismPager) {
-            ismPager = !ismPager;
+//            ismPager = !ismPager;
             mViewpager.addOnPageChangeListener(new ViewPager.OnPageChangeListener() {
                 @Override
                 public void onPageScrolled(int i, float v, int i1) {
@@ -104,18 +107,16 @@ public class LinkManFragment extends BaseFragment {
         // FragmentPagerAdapter
         //两者的区别在于一个状态FragmentStatePagerAdapter表示只创建一个PageView
         // FragmentPagerAdapter一次性全部创建
-        String[] mTitle;
-        public MyPagerAdapter(FragmentManager fm,   String[] title ) {
+        public MyPagerAdapter(FragmentManager fm) {
 //        public MyPagerAdapter(FragmentManager fm, ArrayList<SmartTabInfo> fragments) {
             super(fm);
-            this.mTitle=title;
         }
         @Override
         public Fragment getItem(int position) {
             ContactChildFragment fragment = new ContactChildFragment();
             Bundle args = new Bundle();
             args.putInt("position", position);
-            args.putString("text", mTitle[position]);
+            args.putString("text", title[position]);
 //            args.putString("text", mFragments.get(position).getTitle());
             fragment.setArguments(args);
             return fragment;
@@ -123,13 +124,13 @@ public class LinkManFragment extends BaseFragment {
         }
         @Override
         public int getCount() {
-            return mTitle.length;
+            return title.length;
 //            return mFragments.size();
         }
         //返回页面标题
         @Override
         public CharSequence getPageTitle(int position) {
-            return mTitle[position];
+            return title[position];
 //            return mFragments.get(position).getTitle();
         }
     }
