@@ -63,6 +63,7 @@ public class ContactChildFragment extends BaseFragment {
         Bundle bundle = getArguments();
         typeWho = bundle.getInt("position");
         String text = (String) bundle.get("text");
+        if (aCache==null)
         aCache =  ACache.get(getActivity());
         if (view==null) {
             if (typeWho == 0) {

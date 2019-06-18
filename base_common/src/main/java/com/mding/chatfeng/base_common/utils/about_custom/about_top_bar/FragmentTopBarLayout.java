@@ -46,6 +46,7 @@ public class FragmentTopBarLayout extends LinearLayout {
         if (!StrUtils.isEmpty(title))
             tv_title.setText(title);
     }
+
     public void setTopLinBackground(int color){
         if (color!=0)
             mTopLinBac.setBackgroundColor(color);

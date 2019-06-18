@@ -1,9 +1,15 @@
 <resources>
 
-    <string name="show_login_user">当前登录用户: %s</string>
-    <string name="observe_login_user">添加动态组件</string>
     <!--<string name="app_name">base_common</string>-->
     <string name="app_name">信风</string>
+
+    <string-array name="linkman_top_name">
+        <item>好友</item>
+        <item>群组</item>
+    </string-array>
+
+    <string name="show_login_user">当前登录用户: %s</string>
+    <string name="observe_login_user">添加动态组件</string>
     <string name="phone_is_null">请输入您的手机号</string>
     <string name="pwd_is_null">请输入您的密码</string>
     <string name="verification_code_is_null">请输入验证码</string>

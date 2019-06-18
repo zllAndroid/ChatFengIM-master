@@ -4,14 +4,18 @@ import android.graphics.Color;
 import android.os.Build;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.view.MotionEvent;
+import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
+import android.widget.LinearLayout;
 
 import com.mding.chatfeng.base_common.R;
 import com.mding.chatfeng.base_common.utils.about_dialog.DialogUtils;
 import com.mding.chatfeng.base_common.utils.about_immersive.StateBarUtils;
 import com.mding.chatfeng.base_common.utils.about_main_utils.windowStatusBar;
 import com.mding.chatfeng.base_common.utils.aboutsystem.AppManager;
+import com.mding.chatfeng.base_common.utils.aboutsystem.WindowBugDeal;
 
 
 public class BaseActivityForResult extends AppCompatActivity  {
@@ -103,6 +107,37 @@ public class BaseActivityForResult extends AppCompatActivity  {
     @Override
     protected void onStart() {
         super.onStart();
+        initview();
+    }
+
+    private void initview() {
+        if (isTopBack())
+        {
+            try {
+                findViewById(R.id.include_top_lin_newback).setOnTouchListener(new View.OnTouchListener() {
+                    @Override
+                    public boolean onTouch(View view, MotionEvent motionEvent) {
+                        AppManager.getAppManager().finishActivity();
+                        return false;
+                    }
+                });
+                isGone();
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+        }
+        if (isGones())
+        {
+            isGone();
+        }
+        if (isChat())
+        {
+            isChatWindow();
+        }
+        if (isLogin())
+        {
+            isLoginWindow();
+        }
     }
 
     public boolean isSupportSwipeBack() {
@@ -113,8 +148,87 @@ public class BaseActivityForResult extends AppCompatActivity  {
     }
     //接收到消息，传递给子类
     public void receiveResultMsg(String responseText) {
+    }
 
-
+    private void isGone() {
+        //当FitsSystemWindows设置 true 时，会在屏幕最上方预留出状态栏高度的 padding
+//        StatusBarUtil.setRootViewFitsSystemWindows(this,true);
+        View mtv=null;
+        try {
+            mtv = (View) AppManager.getAppManager().currentActivity().findViewById(R.id.include_top_margin10);
+        } catch (Exception e) {
+            e.printStackTrace();
+            mtv=null;
+        }
+        if (mtv==null)
+        {
+            return;
+        }
+//        LinearLayout mLinBac = (LinearLayout) AppManager.getAppManager().currentActivity().findViewById(R.id.include_top_lin_background);
+//        mLinBac.setBackgroundColor(getResources().getColor(R.color.app_theme));
+        mtv.setBackgroundColor(getResources().getColor(R.color.app_theme));
+        // 设置状态栏高度
+        int statusBarHeight = WindowBugDeal.getStatusBarHeight(this);
+        //这里我用RelativeLayout布局为列，其他布局设置方法一样，只需改变布局名就行
+        LinearLayout.LayoutParams layout=(LinearLayout.LayoutParams)mtv.getLayoutParams();
+        //获得button控件的位置属性，需要注意的是，可以将button换成想变化位置的其它控件
+//        layout.setMargins(0,-statusBarHeight,0,0);
+        layout.height=statusBarHeight;
+        //设置button的新位置属性,left，top，right，bottom
+        mtv.setLayoutParams(layout);
+//        mtv.getBackground().setAlpha(0);
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.KITKAT) {
+            mtv.setVisibility(View.VISIBLE);
+        }else
+        {
+            mtv.setVisibility(View.GONE);
+        }
+    }
+    private void isChatWindow() {
+//聊天界面因为window，需要状态栏高度撑起
+        View mtv;
+        mtv = (View) AppManager.getAppManager().currentActivity().findViewById(R.id.include_top_margin10);
+        LinearLayout mLinBac = (LinearLayout) AppManager.getAppManager().currentActivity().findViewById(R.id.include_top_lin_background);
+        mLinBac.setBackgroundColor(getResources().getColor(R.color.app_theme));
+        mtv.setBackgroundColor(getResources().getColor(R.color.app_theme));
+        // 设置状态栏高度
+        int statusBarHeight = WindowBugDeal.getStatusBarHeight(this);
+        //这里我用RelativeLayout布局为列，其他布局设置方法一样，只需改变布局名就行
+        LinearLayout.LayoutParams layout=(LinearLayout.LayoutParams)mtv.getLayoutParams();
+        //获得button控件的位置属性，需要注意的是，可以将button换成想变化位置的其它控件
+//        layout.setMargins(0,-statusBarHeight,0,0);
+        layout.height=statusBarHeight;
+        //设置button的新位置属性,left，top，right，bottom
+        mtv.setLayoutParams(layout);
+//        mtv.getBackground().setAlpha(0);
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.KITKAT) {
+            mtv.setVisibility(View.VISIBLE);
+        }else
+        {
+            mtv.setVisibility(View.GONE);
+        }
+    }
+    private void isLoginWindow() {
+//聊天界面因为window，需要状态栏高度撑起
+        View mtv;
+        mtv = (View) AppManager.getAppManager().currentActivity().findViewById(R.id.include_top_margin10);
+        mtv.setBackgroundColor(getResources().getColor(R.color.app_theme));
+        // 设置状态栏高度
+        int statusBarHeight = WindowBugDeal.getStatusBarHeight(this);
+        //这里我用RelativeLayout布局为列，其他布局设置方法一样，只需改变布局名就行
+        LinearLayout.LayoutParams layout=(LinearLayout.LayoutParams)mtv.getLayoutParams();
+        //获得button控件的位置属性，需要注意的是，可以将button换成想变化位置的其它控件
+//        layout.setMargins(0,-statusBarHeight,0,0);
+        layout.height=statusBarHeight;
+        //设置button的新位置属性,left，top，right，bottom
+        mtv.setLayoutParams(layout);
+//        mtv.getBackground().setAlpha(0);
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.KITKAT) {
+            mtv.setVisibility(View.VISIBLE);
+        }else
+        {
+            mtv.setVisibility(View.GONE);
+        }
     }
 
 }

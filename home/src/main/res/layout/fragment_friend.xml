@@ -3,7 +3,11 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="horizontal">
-
+    <!--<com.mding.chatfeng.base_common.utils.about_custom.about_top_bar.FragmentTopBarLayout-->
+        <!--android:id="@+id/fg_top_bar"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--/>-->
     <ExpandableListView
         android:id="@+id/frag_exlist_friend"
         android:layout_width="match_parent"

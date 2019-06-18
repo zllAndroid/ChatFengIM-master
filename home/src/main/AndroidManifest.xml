@@ -5,6 +5,12 @@
     <application>
         <activity android:name=".MainActivity"
             />
+
+        <activity
+            android:name="com.mding.chatfeng.home.ui.about_mine.ChangeInfoActivity"
+            android:launchMode="singleTop"
+            android:theme="@style/SwipeBack.Transparent.Theme"
+            android:windowSoftInputMode="adjustResize" />
     </application>
 
 </manifest>

@@ -11,11 +11,11 @@
 
     <!--title bar-->
     <!--<include layout="@layout/fragment_include_title_bar"/>-->
-    <!--<com.mding.chatfeng.home.about_top_bar.FragmentTopBarLayout-->
-        <!--android:id="@+id/fg_top_bar"-->
-        <!--android:layout_width="match_parent"-->
-        <!--android:layout_height="wrap_content"-->
-        <!--/>-->
+    <com.mding.chatfeng.base_common.utils.about_custom.about_top_bar.FragmentTopBarLayout
+        android:id="@+id/fg_top_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        />
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

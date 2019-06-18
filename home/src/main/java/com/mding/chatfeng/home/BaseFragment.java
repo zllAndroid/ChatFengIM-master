@@ -53,10 +53,14 @@ public class BaseFragment extends Fragment  implements View.OnClickListener{
 	@Override
 	public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
 //		if (view == null)
+		try {
 			view = inflater.inflate(setFragmentLayout(), container, false);
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
 
 		initBaseUI(view);
-//		initTopBarEvent();
+		initTopBarEvent();
 		return view;
 	}
 	public final <E extends View> E getView (int id) {
@@ -82,66 +86,36 @@ public class BaseFragment extends Fragment  implements View.OnClickListener{
 //			}
 //		}
 //	}
-//	@Override
-//	public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
-//		super.onViewCreated(view, savedInstanceState);
-//		mIsPrepare = true;
-//		lazyLoad();
-//	}
-
-//	@Override
-//	public void setUserVisibleHint(boolean isVisibleToUser) {
-//		super.setUserVisibleHint(isVisibleToUser);
-//		if (isVisibleToUser) {
-//			mIsVisible = true;
-//			lazyLoad();
-//		} else {
-//			mIsVisible = false;
-//		}
-//	}
-//	private void lazyLoad() {
-//		//这里进行三个条件的判断，如果有一个不满足，都将不进行加载
-//		if (!mIsPrepare || !mIsVisible||!mIsFirstLoad) {
-//			return;
-//		}
-//		loadData();
-//		//数据加载完毕,恢复标记,防止重复加载
-//		mIsFirstLoad = false;
-//	}
-
-//	public void loadData() {
-//		//这里进行网络请求和数据装载
-//	}
 	protected void initBaseUI(View view) {
 
 	}
 	ConfirmPopWindow confirmPopWindow=null;
 
 
-//	private void initTopBarEvent() {
-////		FragmentTopBarLayout mTopBar = view.findViewById(R.id.fg_top_bar);
-//		if (setFragmentTopBarLayout()!=null) {
-//			FragmentTopBarLayout mTopBar=setFragmentTopBarLayout();
-//			mTopBar.setTitle(setFragmentTital());
-//			mTopBar.setOnRightClick(new View.OnClickListener() {
-//				@Override
-//				public void onClick(View view) {
+	private void initTopBarEvent() {
+//		FragmentTopBarLayout mTopBar = view.findViewById(R.id.fg_top_bar);
+		if (setFragmentTopBarLayout()!=null) {
+			FragmentTopBarLayout mTopBar=setFragmentTopBarLayout();
+			mTopBar.setTitle(setFragmentTital());
+			mTopBar.setOnRightClick(new View.OnClickListener() {
+				@Override
+				public void onClick(View view) {
+
+					if (confirmPopWindow == null)
+						confirmPopWindow = new ConfirmPopWindow(getActivity());
+					confirmPopWindow.showAtBottom(view.findViewById(R.id.include_frag_img_add));
+				}
+			});
+			mTopBar.setOnSearchClick(new View.OnClickListener() {
+				@Override
+				public void onClick(View view) {
+					searchClickEvent();
+				}
+			});
+		}
 //
-//					if (confirmPopWindow == null)
-//						confirmPopWindow = new ConfirmPopWindow(getActivity());
-//					confirmPopWindow.showAtBottom(view.findViewById(R.id.include_frag_img_add));
-//				}
-//			});
-//			mTopBar.setOnSearchClick(new View.OnClickListener() {
-//				@Override
-//				public void onClick(View view) {
-//					searchClickEvent();
-//				}
-//			});
-//		}
-////
-////		mTopBar.setTopLinBackground(setTopBarBackground());
-//	}
+//		mTopBar.setTopLinBackground(setTopBarBackground());
+	}
 
 	protected View getViewLayout() {
 		return view;

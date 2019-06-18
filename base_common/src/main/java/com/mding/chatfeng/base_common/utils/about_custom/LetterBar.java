@@ -104,6 +104,8 @@ public class LetterBar extends View
         {
             index=0;
         }
+        if (listener==null)
+            return false;
         switch (action)
         {
             //监听按下

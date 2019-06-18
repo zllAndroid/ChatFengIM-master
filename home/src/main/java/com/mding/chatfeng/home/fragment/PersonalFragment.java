@@ -24,6 +24,7 @@ import com.mding.chatfeng.base_common.utils.aboututils.StrUtils;
 import com.mding.chatfeng.home.BaseFragment;
 import com.mding.chatfeng.home.R;
 import com.mding.chatfeng.home.ui.about_contacts.about_search.SearchActivity;
+import com.mding.chatfeng.home.ui.about_mine.ChangeInfoActivity;
 
 import org.greenrobot.eventbus.Subscribe;
 import org.greenrobot.eventbus.ThreadMode;
@@ -64,8 +65,9 @@ public class PersonalFragment extends BaseFragment {
     @Override
     protected void initBaseUI(View view) {
         super.initBaseUI(view);
-
-
+        FragmentTopBarLayout mTopBar = getView(R.id.fg_top_bar);
+//        mTopBar.setBackgroundColor(getResources().getColor(R.color.app_theme));
+        mTopBar.setTopLinBackground(getResources().getColor(R.color.app_theme));
     }
 
     @Override
@@ -133,7 +135,6 @@ public class PersonalFragment extends BaseFragment {
             }
         }
     }
-
     @Override
     protected String setFragmentTital() {
         return getResources().getString(R.string.personal_fragment);
@@ -229,17 +230,17 @@ public class PersonalFragment extends BaseFragment {
         mineLinSet=getView(R.id.mine_lin_set);
         mineLinOrangePocket=getView(R.id.mine_lin_orange_pocket);
 
-//        addOnClickListeners(R.id.mine_iv_qrcode, R.id.mine_iv_person, R.id.include_frag_img_search, R.id.mine_lin_person_info,
-//                R.id.mine_lin_share, R.id.mine_lin_set, R.id.mine_lin_discover, R.id.mine_lin_orange_pocket);
+        addOnClickListeners(R.id.mine_iv_qrcode, R.id.mine_iv_person,R.id.mine_lin_person_info,
+                R.id.mine_lin_share, R.id.mine_lin_set, R.id.mine_lin_discover, R.id.mine_lin_orange_pocket);
 
-        getView(R.id.mine_lin_discover).setOnClickListener(this);
-        getView(R.id.mine_lin_orange_pocket).setOnClickListener(this);
-        getView(R.id.mine_iv_qrcode).setOnClickListener(this);
-        getView(R.id.mine_iv_person).setOnClickListener(this);
-//        getView(R.id.include_frag_img_search).setOnClickListener(this);
-        getView(R.id.mine_lin_person_info).setOnClickListener(this);
-        getView(R.id.mine_lin_share).setOnClickListener(this);
-        getView(R.id.mine_lin_set).setOnClickListener(this);
+//        getView(R.id.mine_lin_discover).setOnClickListener(this);
+//        getView(R.id.mine_lin_orange_pocket).setOnClickListener(this);
+//        getView(R.id.mine_iv_qrcode).setOnClickListener(this);
+//        getView(R.id.mine_iv_person).setOnClickListener(this);
+////        getView(R.id.include_frag_img_search).setOnClickListener(this);
+//        getView(R.id.mine_lin_person_info).setOnClickListener(this);
+//        getView(R.id.mine_lin_share).setOnClickListener(this);
+//        getView(R.id.mine_lin_set).setOnClickListener(this);
     }
 
 //    @OnClick({R.id.mine_iv_qrcode, R.id.mine_iv_person, R.id.include_frag_img_search, R.id.mine_lin_person_info,
@@ -254,7 +255,7 @@ public class PersonalFragment extends BaseFragment {
             IntentUtils.JumpTo(SearchActivity.class);
 
         } else if (i == R.id.mine_lin_person_info) {
-//            IntentUtils.JumpTo(ChangeInfoActivity.class);
+            IntentUtils.JumpTo(ChangeInfoActivity.class);
 
         } else if (i == R.id.mine_lin_share) {
 //            IntentUtils.JumpTo(MyAccountActivity.class);

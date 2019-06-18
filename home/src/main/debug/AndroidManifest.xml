@@ -17,6 +17,13 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <!--<activity-->
+            <!--android:name="com.mding.chatfeng.home.ui.about_mine.ChangeInfoActivity"-->
+            <!--android:launchMode="singleTop"-->
+            <!--android:theme="@style/SwipeBack.Transparent.Theme"-->
+            <!--android:windowSoftInputMode="adjustResize" />-->
+        <!--com.mding.chatfeng.home.ui.about_mine-->
     </application>
 
 </manifest>

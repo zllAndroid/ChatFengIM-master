@@ -11,4 +11,5 @@ public class DebugApplication extends Application {
         CC.enableVerboseLog(BuildConfig.DEBUG);
         CC.enableRemoteCC(BuildConfig.DEBUG);
     }
+
 }

@@ -164,7 +164,6 @@ public class MainActivity extends BaseActivity {
 
     /**
      * 更新新消息数量
-     *
      * @param tabIndex tab 的索引
      * @param msgCount 消息数量
      */
@@ -180,7 +179,7 @@ public class MainActivity extends BaseActivity {
             mFragmentList.clear();
             mFragmentList.add(new TabItem(MsgFragment.class));
 
-            mFragmentList.add(new TabItem( LinkManFragment.class));
+            mFragmentList.add(new TabItem(LinkManFragment.class));
 
             mFragmentList.add(new TabItem(FindFragment.class));
 

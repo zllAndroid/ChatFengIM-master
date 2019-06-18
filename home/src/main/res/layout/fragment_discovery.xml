@@ -13,11 +13,11 @@
 
     <!--<include layout="@layout/fragment_include_title_bar"/>-->
     <!--朋友圈-->
-    <!--<com.mding.chatfeng.base_common.utils.about_custom.about_top_bar.FragmentTopBarLayout-->
-        <!--android:id="@+id/fg_top_bar"-->
-        <!--android:layout_width="match_parent"-->
-        <!--android:layout_height="wrap_content"-->
-        <!--/>-->
+    <com.mding.chatfeng.base_common.utils.about_custom.about_top_bar.FragmentTopBarLayout
+        android:id="@+id/fg_top_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        />
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
