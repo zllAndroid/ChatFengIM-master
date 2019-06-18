@@ -347,6 +347,8 @@
     <string name="discover_title">Discover</string>
     <!--<string name="discover_title">朋友圈</string>-->
     <string name="discover_discover">Discover</string>
+    <!--<string name="discover_music_list">我的歌单</string>-->
+    <string name="discover_music_list">My Music List</string>
     <!--<string name="discover_pet_fuhua">宠物孵化基地</string>-->
     <string name="discover_pet_fuhua">Pet Hatching</string>
     <!--<string name="discover_pet_ai">AI宠物学舌</string>-->
@@ -376,8 +378,10 @@
     <!--***个人中心界面-->
     <!--<string name="personal">个人中心</string>-->
     <string name="personal_fragment">Me</string>
-    <!--<string name="personal_share">分享</string>-->
-    <string name="personal_share">Share</string>
+    <!--<string name="personal_share">分享信风</string>-->
+    <string name="personal_share">Share ChatFeng</string>
+    <!--<string name="personal_wallet">信风钱包</string>-->
+    <string name="personal_wallet">ChatFeng Wallet</string>
     <!--<string name="personal_setting">设置</string>-->
     <string name="personal_setting">Setting</string>
     <!--<string name="personal_discover">动态</string>-->

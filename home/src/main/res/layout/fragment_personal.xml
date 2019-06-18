@@ -170,12 +170,20 @@
             <!--app:srcCompat="@drawable/in_right" />-->
             <!--</LinearLayout>-->
 
+            <!--信风钱包-->
+            <com.mding.chatfeng.base_common.utils.about_custom.about_linearlayout.CusLinearLayout
+                android:id="@+id/mine_lin_wallet"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"/>
+
             <!--设置-->
             <com.mding.chatfeng.base_common.utils.about_custom.about_linearlayout.CusLinearLayout
                 android:id="@+id/mine_lin_set"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"/>
+
             <!--<View-->
             <!--android:layout_width="match_parent"-->
             <!--android:background="@color/greyf3"-->
@@ -231,71 +239,71 @@
             <!--app:srcCompat="@drawable/in_right" />-->
             <!--</LinearLayout>-->
 
-            <!--朋友圈动态-->
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:background="@color/white"
-                android:orientation="vertical">
-                <View
-                    android:id="@+id/cus_linearlayout_view_line"
-                    style="@style/style_cus_linear_layout_line"
-                    />
-                <LinearLayout
-                    android:id="@+id/mine_lin_discover"
-                    android:layout_width="match_parent"
-                    android:layout_height="@dimen/dp100"
-                    android:gravity="center"
-                    android:orientation="horizontal"
-                    android:background="@color/white">
-                    <ImageView
-                        android:layout_width="@dimen/dp20"
-                        android:layout_height="@dimen/dp20"
-                        android:src="@drawable/discover_star"
-                        android:layout_gravity="center"
-                        android:layout_marginLeft="@dimen/dp10"/>
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center"
-                        android:layout_marginLeft="@dimen/dp8"
-                        android:text="@string/personal_discover"/>
-                    <LinearLayout
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginLeft="@dimen/dp30"
-                        android:layout_marginTop="@dimen/dp10"
-                        android:layout_marginBottom="@dimen/dp10"
-                        android:layout_weight="1"
-                        android:layout_gravity="center">
-                        <RelativeLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:descendantFocusability="blocksDescendants">
-
-                            <android.support.v7.widget.RecyclerView
-                                android:id="@+id/mine_recyc_discover"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_alignParentBottom="true"
-                                android:layout_marginBottom="0dp"
-                                android:fadingEdge="none" />
-                        </RelativeLayout>
-                    </LinearLayout>
+            <!--&lt;!&ndash;朋友圈动态&ndash;&gt;-->
+            <!--<LinearLayout-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:background="@color/white"-->
+                <!--android:orientation="vertical">-->
+                <!--<View-->
+                    <!--android:id="@+id/cus_linearlayout_view_line"-->
+                    <!--style="@style/style_cus_linear_layout_line"-->
+                    <!--/>-->
+                <!--<LinearLayout-->
+                    <!--android:id="@+id/mine_lin_discover"-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="@dimen/dp100"-->
+                    <!--android:gravity="center"-->
+                    <!--android:orientation="horizontal"-->
+                    <!--android:background="@color/white">-->
                     <!--<ImageView-->
-                    <!--android:layout_width="wrap_content"-->
-                    <!--android:layout_height="wrap_content"-->
-                    <!--android:padding="@dimen/dp10"-->
-                    <!--app:srcCompat="@drawable/in_right" />-->
-                    <ImageView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:src="@drawable/in_right"
-                        android:layout_gravity="center"
-                        android:layout_marginLeft="@dimen/dp20"
-                        android:padding="@dimen/dp5"/>
-                </LinearLayout>
-            </LinearLayout>
+                        <!--android:layout_width="@dimen/dp20"-->
+                        <!--android:layout_height="@dimen/dp20"-->
+                        <!--android:src="@drawable/discover_star"-->
+                        <!--android:layout_gravity="center"-->
+                        <!--android:layout_marginLeft="@dimen/dp10"/>-->
+                    <!--<TextView-->
+                        <!--android:layout_width="wrap_content"-->
+                        <!--android:layout_height="wrap_content"-->
+                        <!--android:layout_gravity="center"-->
+                        <!--android:layout_marginLeft="@dimen/dp8"-->
+                        <!--android:text="@string/personal_discover"/>-->
+                    <!--<LinearLayout-->
+                        <!--android:layout_width="wrap_content"-->
+                        <!--android:layout_height="wrap_content"-->
+                        <!--android:layout_marginLeft="@dimen/dp30"-->
+                        <!--android:layout_marginTop="@dimen/dp10"-->
+                        <!--android:layout_marginBottom="@dimen/dp10"-->
+                        <!--android:layout_weight="1"-->
+                        <!--android:layout_gravity="center">-->
+                        <!--<RelativeLayout-->
+                            <!--android:layout_width="match_parent"-->
+                            <!--android:layout_height="wrap_content"-->
+                            <!--android:descendantFocusability="blocksDescendants">-->
+
+                            <!--<android.support.v7.widget.RecyclerView-->
+                                <!--android:id="@+id/mine_recyc_discover"-->
+                                <!--android:layout_width="wrap_content"-->
+                                <!--android:layout_height="wrap_content"-->
+                                <!--android:layout_alignParentBottom="true"-->
+                                <!--android:layout_marginBottom="0dp"-->
+                                <!--android:fadingEdge="none" />-->
+                        <!--</RelativeLayout>-->
+                    <!--</LinearLayout>-->
+                    <!--&lt;!&ndash;<ImageView&ndash;&gt;-->
+                    <!--&lt;!&ndash;android:layout_width="wrap_content"&ndash;&gt;-->
+                    <!--&lt;!&ndash;android:layout_height="wrap_content"&ndash;&gt;-->
+                    <!--&lt;!&ndash;android:padding="@dimen/dp10"&ndash;&gt;-->
+                    <!--&lt;!&ndash;app:srcCompat="@drawable/in_right" />&ndash;&gt;-->
+                    <!--<ImageView-->
+                        <!--android:layout_width="wrap_content"-->
+                        <!--android:layout_height="wrap_content"-->
+                        <!--android:src="@drawable/in_right"-->
+                        <!--android:layout_gravity="center"-->
+                        <!--android:layout_marginLeft="@dimen/dp20"-->
+                        <!--android:padding="@dimen/dp5"/>-->
+                <!--</LinearLayout>-->
+            <!--</LinearLayout>-->
 
             <!--Part 2-->
             <LinearLayout

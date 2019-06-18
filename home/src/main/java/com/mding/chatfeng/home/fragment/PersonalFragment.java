@@ -46,6 +46,7 @@ public class PersonalFragment extends BaseFragment {
     ImageView mineIvPerson;
     ImageView mineIvAdd;
     CusLinearLayout mineLinShare;
+    CusLinearLayout mineLinWallet;
     CusLinearLayout mineLinSet;
     CusLinearLayout mineLinOrangePocket;
 
@@ -89,6 +90,8 @@ public class PersonalFragment extends BaseFragment {
     private void initLinearLayout() {
         // 分享
         initShare();
+        // 信风钱包
+        initWallet();
         // 设置
         initSet();
         // 橙子口袋
@@ -100,6 +103,11 @@ public class PersonalFragment extends BaseFragment {
         mineLinShare.setImgLogo(getResources().getDrawable(R.drawable.mine_share));
         mineLinShare.setTvTitle(getResources().getString(R.string.personal_share));
 //        mineLinShare.setTvTitle("分享");
+    }
+    private void initWallet() {
+        mineLinWallet.setImgLogo(getResources().getDrawable(R.drawable.mine_wallet));
+        mineLinWallet.setTvTitle(getResources().getString(R.string.personal_wallet));
+//        mineLinSet.setTvTitle("设置");
     }
     private void initSet() {
         mineLinSet.setImgLogo(getResources().getDrawable(R.drawable.mine_set));
@@ -229,11 +237,12 @@ public class PersonalFragment extends BaseFragment {
         mineIvPerson=getView(R.id.mine_iv_person);
         mineIvAdd=getView(R.id.include_frag_img_add);
         mineLinShare=getView(R.id.mine_lin_share);
+        mineLinWallet=getView(R.id.mine_lin_wallet);
         mineLinSet=getView(R.id.mine_lin_set);
         mineLinOrangePocket=getView(R.id.mine_lin_orange_pocket);
 
         addOnClickListeners(R.id.mine_iv_qrcode, R.id.mine_iv_person,R.id.mine_lin_person_info,
-                R.id.mine_lin_share, R.id.mine_lin_set, R.id.mine_lin_discover, R.id.mine_lin_orange_pocket);
+                R.id.mine_lin_share, R.id.mine_lin_set, R.id.mine_lin_wallet, R.id.mine_lin_orange_pocket);
 
 //        getView(R.id.mine_lin_discover).setOnClickListener(this);
 //        getView(R.id.mine_lin_orange_pocket).setOnClickListener(this);
@@ -269,7 +278,7 @@ public class PersonalFragment extends BaseFragment {
             IntentUtils.JumpTo(MineSetActivity.class);
 //            IntentUtils.JumpToHaveOne(MineSetActivity.class, "phone", userPhone);
 
-        } else if (i == R.id.mine_lin_discover) {
+        } else if (i == R.id.mine_lin_wallet) {
             DialogUtils.showDialog(getResources().getString(R.string.stay_tuned));
             //                DialogUtils.showDialog(getResources().getString(R.string.stay_tuned));
         } else if (i == R.id.mine_lin_orange_pocket) {

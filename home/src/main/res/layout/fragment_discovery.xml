@@ -33,6 +33,12 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"/>
+            <!--我的歌单-->
+            <com.mding.chatfeng.base_common.utils.about_custom.about_linearlayout.CusLinearLayout
+                android:id="@+id/discover_lin_music_list"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"/>
             <!--<LinearLayout-->
                 <!--android:id="@+id/discover_lin_friendcircle"-->
                 <!--android:layout_width="match_parent"-->
@@ -63,6 +69,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="@color/white"
+                android:visibility="gone"
                 android:orientation="vertical">
                 <!--宠物孵化基地-->
                 <com.mding.chatfeng.base_common.utils.about_custom.about_linearlayout.CusLinearLayout
@@ -204,6 +211,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="@color/white"
+                android:visibility="gone"
                 android:orientation="vertical">
                 <!--我是预言家-->
                 <com.mding.chatfeng.base_common.utils.about_custom.about_linearlayout.CusLinearLayout
@@ -341,6 +349,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="@color/white"
+                android:visibility="gone"
                 android:orientation="vertical">
                 <!--中国好音乐-->
                 <com.mding.chatfeng.base_common.utils.about_custom.about_linearlayout.CusLinearLayout

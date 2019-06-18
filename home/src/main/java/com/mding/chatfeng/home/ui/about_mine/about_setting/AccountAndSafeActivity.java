@@ -29,7 +29,7 @@ public class AccountAndSafeActivity extends BaseActivity {
         super.initBaseView();
         initViewUI();
         includeTopTvTitle.setText(getResources().getString(R.string.account_security_title));
-//        includeTopTvTital.setText("帐号与安全");
+//        includeTopTvTitle.setText("帐号与安全");
         includeTopIvBack.setVisibility(View.VISIBLE);
     }
 

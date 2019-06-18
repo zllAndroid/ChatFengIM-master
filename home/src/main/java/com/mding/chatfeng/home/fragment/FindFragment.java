@@ -15,6 +15,7 @@ import com.mding.chatfeng.home.R;
  */
 public class FindFragment extends BaseFragment {
   CusLinearLayout discoverLinFriendcircle;
+  CusLinearLayout discoverLinMusicList;
     CusLinearLayout discoverLinAnimalFuhua;
    CusLinearLayout discoverLinAi;
    CusLinearLayout discoverLinAnimalShop;
@@ -60,6 +61,7 @@ public class FindFragment extends BaseFragment {
 
     private void initViewUI() {
         discoverLinFriendcircle= getView(R.id.discover_lin_friendcircle);
+        discoverLinMusicList= getView(R.id.discover_lin_music_list);
         discoverLinAnimalFuhua= getView(R.id.discover_lin_animal_fuhua);
         discoverLinAi= getView(R.id.discover_lin_ai);
         discoverLinAnimalShop= getView(R.id.discover_lin_animal_shop);
@@ -134,33 +136,35 @@ public class FindFragment extends BaseFragment {
     private void initLinearLaout() {
         // 朋友圈
         initDiscover();
+        // 我的歌单
+        initMusicList();
 
-        // 宠物孵化基地
-        initAnimalFuHua();
-        // AI宠物学舌
-        initAI();
-        // 宠物商城
-        initAnimalShop();
-        // 宠物生涯
-        initAnimalLife();
-
-        // 我是预言家
-        initYuYanJia();
-        // 世界告白墙
-        initGaoBaiWall();
-        // 吱一吱，加好友
-        initZhiAddFriend();
-        // 应用商城
-        initAppStore();
-
-        // 中国好音乐
-        initMusic();
-        // 周周试用免单
-        initShiYong();
-        // 防伪溯源鉴定
-        initFangWei();
-        // 广告墙
-        initGuangGaoWall();
+//        // 宠物孵化基地
+//        initAnimalFuHua();
+//        // AI宠物学舌
+//        initAI();
+//        // 宠物商城
+//        initAnimalShop();
+//        // 宠物生涯
+//        initAnimalLife();
+//
+//        // 我是预言家
+//        initYuYanJia();
+//        // 世界告白墙
+//        initGaoBaiWall();
+//        // 吱一吱，加好友
+//        initZhiAddFriend();
+//        // 应用商城
+//        initAppStore();
+//
+//        // 中国好音乐
+//        initMusic();
+//        // 周周试用免单
+//        initShiYong();
+//        // 防伪溯源鉴定
+//        initFangWei();
+//        // 广告墙
+//        initGuangGaoWall();
 
     }
 
@@ -168,6 +172,12 @@ public class FindFragment extends BaseFragment {
         discoverLinFriendcircle.setImgLogo(getResources().getDrawable(R.drawable.discover_friendcircle));
         discoverLinFriendcircle.setTvTitle(getResources().getString(R.string.discover_discover));
 //        discoverLinFriendcircle.setTvTitle("朋友圈");
+    }
+
+    private void initMusicList() {
+        discoverLinMusicList.setImgLogo(getResources().getDrawable(R.drawable.discover_music_list));
+        discoverLinMusicList.setTvTitle(getResources().getString(R.string.discover_music_list));
+//        discoverLinAi.setTvTitle("AI宠物学舌");
     }
 
     private void initAnimalFuHua() {
@@ -243,7 +253,10 @@ public class FindFragment extends BaseFragment {
         super.onClick(view);
         int i = view.getId();
         if (i == R.id.discover_lin_friendcircle) {
-            DialogUtils.showDialog(getResources().getString(R.string.notice_waiting));
+            DialogUtils.showDialog(getResources().getString(R.string.stay_tuned));
+
+        } else if (i == R.id.discover_lin_music_list) {
+            DialogUtils.showDialog(getResources().getString(R.string.stay_tuned));
 
         } else if (i == R.id.discover_lin_animal_fuhua) {
             DialogUtils.showDialog(getResources().getString(R.string.stay_tuned));
