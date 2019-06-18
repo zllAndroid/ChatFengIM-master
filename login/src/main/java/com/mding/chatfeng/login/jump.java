@@ -8,7 +8,7 @@ import com.mding.chatfeng.base_common.AppConfig;
 
 /**
  * 项目：ChatFengIM-master
- * 文件描述：
+ * 文件描述：Login组件（跨模块跳转的组件调用响应）
  * 作者：zll
  * 创建时间：2019/6/10 0010
  * 修改人：

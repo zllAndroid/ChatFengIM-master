@@ -90,7 +90,10 @@ public abstract class NetManager {
         String url=AppConfig.httpProtocolIp;
       if (cc.getParamItem("url")!=null)
           url=cc.getParamItem("url");
-
+if (url == null){
+    AppConfig.logs("URL为空！");
+    return;
+}
         Retrofit  retrofit = new Retrofit.Builder()
                 .baseUrl(url).addConverterFactory(GsonConverterFactory.create())
                 .build();

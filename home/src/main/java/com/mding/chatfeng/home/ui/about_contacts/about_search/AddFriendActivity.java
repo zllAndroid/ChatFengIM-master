@@ -16,12 +16,12 @@ import com.ogaclejapan.smarttablayout.SmartTabLayout;
 
 public class AddFriendActivity extends BaseActivity {
 
-    TextView includeTopTvTital;
+    TextView includeTopTvTitle;
     LinearLayout mLinBack;
     SmartTabLayout viewPagerTab;
     CustomViewPager mViewpager;
     private void initViewUI() {
-        includeTopTvTital=getView(R.id.include_top_tv_tital);
+        includeTopTvTitle=getView(R.id.include_top_tv_title);
         mLinBack=getView(R.id.include_top_lin_back);
         viewPagerTab=getView(R.id.add_friend_viewpagertab);
         mViewpager=getView(R.id.add_friend_viewpager);
@@ -34,7 +34,7 @@ public class AddFriendActivity extends BaseActivity {
     protected void initBaseView() {
         super.initBaseView();
         initViewUI();
-        includeTopTvTital.setText("添加");
+        includeTopTvTitle.setText("添加");
         mLinBack.setBackgroundColor(getResources().getColor(R.color.app_theme));
         myPagerAdapter = new MyPagerAdapter(getSupportFragmentManager());
         if (ismPager)

@@ -56,8 +56,8 @@ public class AppStartActivity extends BaseActivity {
         super.initBaseView();
         initGreate();
 //        addOnClickListeners(R.id.tv_start);
-        initJumpMain();
-//        initJumpLogin();
+//        initJumpMain();
+        initJumpLogin();
 
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M)
             AppStartActivityPermissionsDispatcher.needWithCheck(this);

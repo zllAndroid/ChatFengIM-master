@@ -5,6 +5,28 @@
     <application>
         <activity android:name=".LoginActivity">
         </activity>
+        <!--<activity-->
+            <!--android:name="com.mding.chatfeng.home.ui.about_mine.about_changeinfo.MyAccountActivity"-->
+            <!--android:launchMode="singleTop"-->
+            <!--android:theme="@style/SwipeBack.Transparent.Theme"-->
+            <!--android:windowSoftInputMode="adjustResize" />-->
+        <activity android:name=".SMSLoginActivity"
+            android:launchMode="singleTop"
+            android:theme="@style/SwipeBack.Transparent.Theme"
+            android:windowSoftInputMode="adjustResize"/>
+        <activity android:name=".ResetPwdActivity"
+            android:launchMode="singleTop"
+            android:theme="@style/SwipeBack.Transparent.Theme"
+            android:windowSoftInputMode="adjustResize"/>
+        <activity android:name=".RegisterActivity"
+            android:launchMode="singleTop"
+            android:theme="@style/SwipeBack.Transparent.Theme"
+            android:windowSoftInputMode="adjustResize"/>
+        <activity android:name=".SetHeadImgActivity"
+            android:launchMode="singleTop"
+            android:theme="@style/SwipeBack.Transparent.Theme"
+            android:windowSoftInputMode="adjustResize"/>
+
     </application>
 
 </manifest>

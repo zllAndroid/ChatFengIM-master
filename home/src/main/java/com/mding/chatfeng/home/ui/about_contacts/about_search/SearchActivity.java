@@ -16,13 +16,11 @@ import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import com.chad.library.adapter.base.BaseQuickAdapter;
-import com.mding.chatfeng.base_common.AppConfig;
 import com.mding.chatfeng.base_common.components.base.BaseActivity;
 import com.mding.chatfeng.base_common.components.model.DataSearchResult;
 import com.mding.chatfeng.base_common.utils.GsonParamConverter;
 import com.mding.chatfeng.base_common.utils.about_dialog.DialogUtils;
 import com.mding.chatfeng.base_common.utils.about_main_utils.HelpUtils;
-import com.mding.chatfeng.base_common.utils.about_main_utils.IntentUtils;
 import com.mding.chatfeng.base_common.utils.aboututils.NoDoubleClickUtils;
 import com.mding.chatfeng.base_common.utils.aboututils.StrUtils;
 import com.mding.chatfeng.home.R;
@@ -34,7 +32,7 @@ import java.util.List;
 //搜索好友界面
 public class SearchActivity extends BaseActivity {
 
-    TextView includeTopTvTital;
+    TextView includeTopTvTitle;
     ImageView includeTopIvBack;
     TextView incluTvRight;
     LinearLayout includeTopLinBack;
@@ -61,7 +59,7 @@ public class SearchActivity extends BaseActivity {
         includeTopLinBack = getView(R.id.include_top_lin_back);
         incluTvRight = getView(R.id.inclu_tv_right);
         includeTopIvBack = getView(R.id.include_top_iv_back);
-        includeTopTvTital = getView(R.id.include_top_tv_tital);
+        includeTopTvTitle = getView(R.id.include_top_tv_title);
         addOnClickListeners(R.id.seach_iv_close, R.id.seach_iv_find);
 
     }
@@ -84,8 +82,7 @@ public class SearchActivity extends BaseActivity {
         if (intent!=null)
             type = intent.getStringExtra(SeacchKey);
 
-        includeTopTvTital.setText(getResources().getString(R.string.search_title));
-
+        includeTopTvTitle.setText(getResources().getString(R.string.search_title));
 
         mRecyclerView.setHasFixedSize(true);
         mRecyclerView.setNestedScrollingEnabled(false);

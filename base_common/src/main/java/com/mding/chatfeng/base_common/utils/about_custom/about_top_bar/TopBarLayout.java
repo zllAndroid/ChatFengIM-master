@@ -23,7 +23,7 @@ public class TopBarLayout extends LinearLayout {
         super(context, attrs);
         View inflate = LayoutInflater.from(context).inflate(R.layout.layout_topbar, this);
         img_back = inflate.findViewById(R.id.include_top_iv_back);
-        tv_title = inflate.findViewById(R.id.include_top_tv_tital);
+        tv_title = inflate.findViewById(R.id.include_top_tv_title);
         tv_save = inflate.findViewById(R.id.inclu_tv_right);
         img_right = inflate.findViewById(R.id.include_top_iv_more);
     }

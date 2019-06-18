@@ -16,7 +16,6 @@ import com.billy.cc.core.component.CCResult;
 import com.billy.cc.core.component.IComponentCallback;
 import com.mding.chatfeng.base_common.components.base.BaseActivity;
 import com.mding.chatfeng.base_common.utils.HeadFileUtils;
-import com.mding.chatfeng.base_common.utils.about_main_utils.ImageUtils;
 import com.mding.chatfeng.home.R;
 
 import java.io.File;
@@ -25,7 +24,7 @@ import java.io.OutputStream;
 
 
 public class ShowImgActivity extends BaseActivity  {
-    TextView includeTopTvTital;
+    TextView includeTopTvTitle;
     private ImageView clipViewLayout;
     //    private ClipViewLayout clipViewLayout;
     private TextView btnCancel;
@@ -50,7 +49,7 @@ public class ShowImgActivity extends BaseActivity  {
     @Override
     protected void initBaseView() {
         super.initBaseView();
-        includeTopTvTital.setText("大图预览");
+        includeTopTvTitle.setText("大图预览");
         initView();
         clipViewLayout.setImageBitmap(bitmap);
     }
@@ -60,7 +59,7 @@ public class ShowImgActivity extends BaseActivity  {
      * 初始化组件
      */
     public void initView() {
-        includeTopTvTital = findViewById(R.id.include_top_tv_tital);
+        includeTopTvTitle = findViewById(R.id.include_top_tv_title);
         clipViewLayout = findViewById(R.id.showImg_iv_full);
         btnCancel = findViewById(R.id.btn_cancel);
         btnOk = findViewById(R.id.bt_ok);

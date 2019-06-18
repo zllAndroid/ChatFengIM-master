@@ -25,7 +25,7 @@ import java.util.List;
 
 //位置：
 public class FriendGroupListActivity extends BaseActivity {
-    TextView includeTopTvTital;
+    TextView includeTopTvTitle;
     TextView includeTopTvRight;
     LinearLayout includeTopLin;
     LinearLayout mLinMain;
@@ -47,7 +47,7 @@ public class FriendGroupListActivity extends BaseActivity {
     protected void initBaseView() {
         super.initBaseView();
 initviewUI();
-        includeTopTvTital.setText("选择分组");
+        includeTopTvTitle.setText("选择分组");
         includeTopLin.setBackgroundColor(getResources().getColor(R.color.app_theme));
 
 //        mRecyclerView.setHasFixedSize(true);
@@ -65,7 +65,7 @@ initviewUI();
     }
 
     private void initviewUI() {
-        includeTopTvTital=  getView(R.id.include_top_tv_tital);
+        includeTopTvTitle=  getView(R.id.include_top_tv_title);
         includeTopTvRight=  getView(R.id.inclu_tv_right);
         includeTopLin=  getView(R.id.include_top_lin_back);
         mLinMain=  getView(R.id.choose_group_lin_main);

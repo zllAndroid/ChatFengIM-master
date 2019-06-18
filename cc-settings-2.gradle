@@ -9,12 +9,17 @@ def dependencyMode = GradleVersion.version(project.gradle.gradleVersion) >= Grad
 project.dependencies.add(dependencyMode, "com.billy.android:cc:2.1.5") //用最新版
 //apply plugin: 'com.jakewharton.butterknife'
 
-//android {
+android {
+    compileOptions {//使用JAVA8解析   报错：" invokedynamic requires --min-sdk-version >= 26 " 时添加
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
 //    packagingOptions {
 //        exclude "lib/arm64-v8a/librealm-jni.so"
 //    }
-//}
+}
 dependencies {
+    implementation project(':base_common')
     androidTestImplementation('com.android.support.test.espresso:espresso-core:2.2.2', {
         exclude group: 'com.android.support', module: 'support-annotations'
 //        exclude module: 'support-v4'
@@ -28,6 +33,7 @@ dependencies {
     implementation 'com.android.support:appcompat-v7:28.0.0'
     implementation 'com.android.support:design:28.0.0'
     implementation 'com.android.support:support-v4:28.0.0'
+
 //    implementation 'com.jakewharton:butterknife:8.4.0'
 //    annotationProcessor 'com.jakewharton:butterknife-compiler:8.4.0'
 

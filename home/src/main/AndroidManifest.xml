@@ -7,10 +7,70 @@
             />
 
         <activity
-            android:name="com.mding.chatfeng.home.ui.about_mine.ChangeInfoActivity"
+            android:name="com.mding.chatfeng.home.ui.about_mine.about_changeinfo.ChangeInfoActivity"
             android:launchMode="singleTop"
             android:theme="@style/SwipeBack.Transparent.Theme"
             android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name="com.mding.chatfeng.home.ui.about_mine.about_changeinfo.MyAccountActivity"
+            android:launchMode="singleTop"
+            android:theme="@style/SwipeBack.Transparent.Theme"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".ui.about_mine.about_setting.about_child_page.about_account_and_safe.ChangeBindNewActivity"
+            android:launchMode="singleTop"
+            android:theme="@style/SwipeBack.Transparent.Theme"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".ui.about_mine.about_setting.about_child_page.about_account_and_safe.ChangeBindOldActivity"
+            android:launchMode="singleTop"
+            android:theme="@style/SwipeBack.Transparent.Theme"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".ui.about_mine.about_setting.about_child_page.about_account_and_safe.ChangeCodeActivity"
+            android:launchMode="singleTop"
+            android:theme="@style/SwipeBack.Transparent.Theme"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".ui.about_mine.about_setting.about_child_page.about_account_and_safe.ChangePwdActivity"
+            android:launchMode="singleTop"
+            android:theme="@style/SwipeBack.Transparent.Theme"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name="com.mding.chatfeng.home.ui.about_mine.about_setting.AccountAndSafeActivity"
+            android:launchMode="singleTop"
+            android:theme="@style/SwipeBack.Transparent.Theme"
+             />
+        <activity
+            android:name="com.mding.chatfeng.home.ui.about_mine.about_setting.DiscoverSetActivity"
+            android:launchMode="singleTop"
+            android:theme="@style/SwipeBack.Transparent.Theme"
+             />
+        <activity
+            android:name="com.mding.chatfeng.home.ui.about_mine.about_setting.LaBlackActivity"
+            android:launchMode="singleTop"
+            android:theme="@style/SwipeBack.Transparent.Theme"
+             />
+        <activity
+            android:name="com.mding.chatfeng.home.ui.about_mine.about_setting.MineSetActivity"
+            android:launchMode="singleTop"
+            android:theme="@style/SwipeBack.Transparent.Theme"
+            />
+        <activity
+            android:name="com.mding.chatfeng.home.ui.about_mine.about_setting.NewsRemindActivity"
+            android:launchMode="singleTop"
+            android:theme="@style/SwipeBack.Transparent.Theme"
+            />
+        <activity
+            android:name="com.mding.chatfeng.home.ui.about_mine.about_setting.ShareSetActivity"
+            android:launchMode="singleTop"
+            android:theme="@style/SwipeBack.Transparent.Theme"
+            />
+        <activity
+            android:name="com.mding.chatfeng.home.ui.about_mine.about_setting.YinSiActivity"
+            android:launchMode="singleTop"
+            android:theme="@style/SwipeBack.Transparent.Theme"
+            />
     </application>
 
 </manifest>

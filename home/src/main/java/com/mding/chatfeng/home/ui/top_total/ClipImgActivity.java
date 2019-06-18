@@ -24,7 +24,7 @@ import java.io.OutputStream;
 
 public class ClipImgActivity extends BaseActivity implements View.OnClickListener {
     private static final String TAG = "ClipImageActivity";
-    TextView includeTopTvTital;
+    TextView includeTopTvTitle;
     private ClipViewLayout clipViewLayout1;
     private ClipViewLayout clipViewLayout2;
     private ImageView back;
@@ -49,9 +49,9 @@ public class ClipImgActivity extends BaseActivity implements View.OnClickListene
     @Override
     protected void initBaseView() {
         super.initBaseView();
-        includeTopTvTital= getView(R.id.include_top_tv_tital);
+        includeTopTvTitle= getView(R.id.include_top_tv_title);
         type = getIntent().getIntExtra("type", 1);
-        includeTopTvTital.setText("裁剪头像");
+        includeTopTvTitle.setText("裁剪头像");
         initView();
     }
 

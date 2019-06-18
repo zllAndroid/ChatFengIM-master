@@ -31,7 +31,6 @@ import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 
-import com.mding.chatfeng.base_common.Constants;
 import com.mding.chatfeng.base_common.components.base.BaseActivity;
 import com.mding.chatfeng.base_common.components.model.DataCreatGroupChat;
 import com.mding.chatfeng.base_common.components.model.DataCreatGroupResult;
@@ -40,7 +39,6 @@ import com.mding.chatfeng.base_common.utils.HeadFileUtils;
 import com.mding.chatfeng.base_common.utils.about_custom.LetterBar;
 import com.mding.chatfeng.base_common.utils.about_main_utils.HelpUtils;
 import com.mding.chatfeng.base_common.utils.about_main_utils.ImageUtils;
-import com.mding.chatfeng.base_common.utils.about_main_utils.IntentUtils;
 import com.mding.chatfeng.base_common.utils.aboutsystem.AppManager;
 import com.mding.chatfeng.base_common.utils.aboututils.ToastUtil;
 import com.mding.chatfeng.home.R;
@@ -58,7 +56,7 @@ import java.util.Map;
 
 //位置：创建群聊
 public class CreatGroupChatActivity extends BaseActivity {
-    TextView includeTopTvTital;
+    TextView includeTopTvTitle;
     TextView includeTopTvRight;
     LinearLayout includeTopLin;
     TextView mTvAbc;
@@ -82,7 +80,7 @@ public class CreatGroupChatActivity extends BaseActivity {
 
 
     private void initUIView() {
-        includeTopTvTital= getView(R.id.include_top_tv_tital);
+        includeTopTvTitle= getView(R.id.include_top_tv_title);
          includeTopTvRight=getView(R.id.inclu_tv_right);
 
         includeTopLin=getView(R.id.include_top_lin_back);
@@ -135,7 +133,7 @@ public class CreatGroupChatActivity extends BaseActivity {
         super.initBaseView();
 
         initUIView();
-        includeTopTvTital.setText(getResources().getString(R.string.create_group_title));
+        includeTopTvTitle.setText(getResources().getString(R.string.create_group_title));
         includeTopLin.setBackgroundColor(getResources().getColor(R.color.app_theme));
         includeTopTvRight.setVisibility(View.VISIBLE);
         includeTopTvRight.setText(getResources().getString(R.string.tv_sure));

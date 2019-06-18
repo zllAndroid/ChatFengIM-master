@@ -24,7 +24,9 @@ import com.mding.chatfeng.base_common.utils.aboututils.StrUtils;
 import com.mding.chatfeng.home.BaseFragment;
 import com.mding.chatfeng.home.R;
 import com.mding.chatfeng.home.ui.about_contacts.about_search.SearchActivity;
-import com.mding.chatfeng.home.ui.about_mine.ChangeInfoActivity;
+import com.mding.chatfeng.home.ui.about_mine.about_changeinfo.ChangeInfoActivity;
+import com.mding.chatfeng.home.ui.about_mine.about_changeinfo.MyAccountActivity;
+import com.mding.chatfeng.home.ui.about_mine.about_setting.MineSetActivity;
 
 import org.greenrobot.eventbus.Subscribe;
 import org.greenrobot.eventbus.ThreadMode;
@@ -43,9 +45,9 @@ public class PersonalFragment extends BaseFragment {
     TextView mineTvSign;
     ImageView mineIvPerson;
     ImageView mineIvAdd;
-  CusLinearLayout mineLinShare;
-  CusLinearLayout mineLinSet;
-  CusLinearLayout mineLinOrangePocket;
+    CusLinearLayout mineLinShare;
+    CusLinearLayout mineLinSet;
+    CusLinearLayout mineLinOrangePocket;
 
     public PersonalFragment() {
     }
@@ -258,12 +260,13 @@ public class PersonalFragment extends BaseFragment {
             IntentUtils.JumpTo(ChangeInfoActivity.class);
 
         } else if (i == R.id.mine_lin_share) {
-//            IntentUtils.JumpTo(MyAccountActivity.class);
+            IntentUtils.JumpTo(MyAccountActivity.class);
 
         } else if (i == R.id.mine_iv_qrcode) {
-//            IntentUtils.JumpTo(MyAccountActivity.class);
+            IntentUtils.JumpTo(MyAccountActivity.class);
 
         } else if (i == R.id.mine_lin_set) {
+            IntentUtils.JumpTo(MineSetActivity.class);
 //            IntentUtils.JumpToHaveOne(MineSetActivity.class, "phone", userPhone);
 
         } else if (i == R.id.mine_lin_discover) {

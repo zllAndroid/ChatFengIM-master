@@ -1,5 +1,7 @@
 <resources>
+    <!--<string name="app_name">base_common</string>-->
 
+    <!--<string name="app_name">信风</string>-->
     <!--<string name="app_name">base_common</string>-->
     <string name="app_name">信风</string>
 
@@ -8,11 +10,11 @@
         <item>群组</item>
     </string-array>
 
-    <string name="show_login_user">当前登录用户: %s</string>
-    <string name="observe_login_user">添加动态组件</string>
+    <!--<string name="show_login_user">当前登录用户: %s</string>-->
+    <!--<string name="observe_login_user">添加动态组件</string>-->
     <string name="phone_is_null">请输入您的手机号</string>
     <string name="pwd_is_null">请输入您的密码</string>
-    <string name="verification_code_is_null">请输入验证码</string>
+    <string name="code_is_null">请输入验证码</string>
     <string name="phone_is_error">请输入正确的手机号</string>
     <string name="try_again_later">请稍后再试</string>
 
@@ -96,6 +98,13 @@
     <string name="register_pwd_set_error">密码至少要包括:\n字母、数字、标点符号\n的其中两项,长度为6–20位</string>
     <!--注册成功-->
     <string name="register_succeed">注册成功</string>
+
+    <!--***注册后第一次设置昵称头像界面-->
+    <string name="first_add_title">注册</string>
+    <string name="first_add_skip">跳过</string>
+    <string name="first_add_set_head_img">设置头像</string>
+    <string name="first_add_nick_name">昵称</string>
+    <string name="first_add_sure">确定</string>
 
 
     <!--***所有登录界面-->
@@ -283,6 +292,8 @@
     <string name="setting_btn_log_out_and_delete">退出并删除帐号信息</string>
 
 
+    <string name="dong_tu_play_title">动图播放设置</string>
+
     <!--***名片分享界面-->
     <string name="card_sharing_title">名片分享</string>
     <string name="card_sharing_permit">允许分享</string>
@@ -293,8 +304,34 @@
 
     <!--***帐号与安全界面-->
     <string name="account_security_title">账号与安全</string>
-    <string name="account_security_modify_pwd">修改密码</string>
+    <string name="account_security_change_pwd">修改密码</string>
     <string name="account_security_change_bind">更换绑定</string>
+
+    <!--***修改密码界面  用密码-->
+    <string name="change_pwd_title">修改密码</string>
+    <string name="change_pwd_change_success">修改密码成功</string>
+    <string name="change_pwd_pwd_old">旧密码</string>
+    <string name="change_pwd_pwd_new">新密码</string>
+    <string name="change_pwd_pwd_sure">确认密码</string>
+    <string name="change_pwd_use_code">验证码修改</string>
+
+    <!--**修改密码界面  用验证码-->
+    <string name="change_pwd_use_code_title">修改密码</string>
+    <string name="change_pwd_use_code_change_success">修改密码成功</string>
+    <string name="change_pwd_use_code_account">帐号</string>
+    <string name="change_pwd_use_code_code">验证码</string>
+    <string name="change_pwd_use_code_get_code">获取</string>
+    <string name="change_pwd_use_code_new_pwd">新密码</string>
+    <string name="change_pwd_use_pwd">密码修改</string>
+
+    <!--***更换绑定界面-->
+    <string name="change_phone_title">更换绑定</string>
+    <string name="change_phone_old_phone">原号码</string>
+    <string name="change_phone_code">验证码</string>
+    <string name="change_phone_get_code">获取</string>
+    <string name="change_phone_next_step">下一步</string>
+    <string name="change_phone_success">换绑号码成功</string>
+    <string name="change_phone_new_phone">新号码</string>
 
     <!--***隐私设置界面-->
     <string name="privacy_title">隐私设置</string>

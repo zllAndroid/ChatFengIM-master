@@ -1,4 +1,4 @@
-package com.mding.chatfeng.home.ui.about_mine;
+package com.mding.chatfeng.home.ui.about_mine.about_changeinfo;
 
 import android.Manifest;
 import android.app.Activity;
@@ -16,7 +16,6 @@ import android.os.Environment;
 import android.provider.MediaStore;
 import android.support.v4.app.ActivityCompat;
 import android.support.v4.content.ContextCompat;
-import android.util.Log;
 import android.view.Gravity;
 import android.view.View;
 import android.widget.ImageView;
@@ -57,7 +56,7 @@ import java.io.IOException;
 //我的资料页面   在个人中心点击进入此
 public class ChangeInfoActivity extends BaseActivity implements ChangeInfoWindow.OnAddContantClickListener {
 
-    TextView includeTopTvTital;
+    TextView includeTopTvTitle;
     ImageView includeTopIvBack;
     ImageView changeinfoIvHead;
     ImageView changeinfoIvWrite;
@@ -100,8 +99,8 @@ public class ChangeInfoActivity extends BaseActivity implements ChangeInfoWindow
         initViewUI();
 
         includeTopIvBack.setVisibility(View.VISIBLE);
-        includeTopTvTital.setText(getResources().getString(R.string.my_info_title));
-//        includeTopTvTital.setText("我的资料");
+        includeTopTvTitle.setText(getResources().getString(R.string.my_info_title));
+//        includeTopTvTitle.setText("我的资料");
         includeTopLinBackground.setBackgroundColor(getResources().getColor(R.color.app_theme));
         if (aCache==null){
             aCache =  ACache.get(this);
@@ -122,7 +121,7 @@ public class ChangeInfoActivity extends BaseActivity implements ChangeInfoWindow
     }
 
     private void initViewUI() {
-        includeTopTvTital=getView(R.id.include_top_tv_tital);
+        includeTopTvTitle=getView(R.id.include_top_tv_title);
         includeTopIvBack=getView(R.id.include_top_iv_back);
         changeinfoIvHead=getView(R.id.include_top_iv_back);
         changeinfoIvWrite=getView(R.id.changeinfo_iv_count);
@@ -170,10 +169,11 @@ public class ChangeInfoActivity extends BaseActivity implements ChangeInfoWindow
             if (NoDoubleClickUtils.isDoubleClick())
                 doChangeName();
 
-//               TODO 点击头像跳转
+//               TODO 点击二维码跳转
         } else if (i == R.id.changeinfo_iv_qrcode) {
             //                Log.e("qrCode","----------------------------------userId = "+SplitWeb.getSplitWeb().getUserId());
 //                IntentUtils.JumpToHaveOne(MyAccountActivity.class,"userId",SplitWeb.getSplitWeb().getUserId());
+                IntentUtils.JumpTo(MyAccountActivity.class);
 
         } else if (i == R.id.changeinfo_lin_sign) {
             if (NoDoubleClickUtils.isDoubleClick())
