@@ -16,9 +16,11 @@ import com.mding.chatfeng.base_common.R;
 import com.mding.chatfeng.base_common.utils.about_custom.about_top_bar.FragmentTopBarLayout;
 import com.mding.chatfeng.base_common.utils.about_key.AppAllKey;
 import com.mding.chatfeng.base_common.utils.about_main_utils.HelpUtils;
+import com.mding.chatfeng.base_common.utils.about_main_utils.IntentUtils;
 import com.mding.chatfeng.base_common.utils.aboututils.ACache;
 import com.mding.chatfeng.home.about_broadcastreceiver.MessageEvent;
 import com.mding.chatfeng.home.fragment.top_pop.ConfirmPopWindow;
+import com.mding.chatfeng.home.ui.about_contacts.about_search.SearchActivity;
 
 import org.greenrobot.eventbus.EventBus;
 import org.greenrobot.eventbus.Subscribe;
@@ -108,6 +110,7 @@ public class BaseFragment extends Fragment  implements View.OnClickListener{
 					searchClickEvent();
 				}
 			});
+//			ScanActivity
 		}
 //
 //		mTopBar.setTopLinBackground(setTopBarBackground());
@@ -124,8 +127,7 @@ public class BaseFragment extends Fragment  implements View.OnClickListener{
 	}
 
 	protected void searchClickEvent() {
-//		IntentUtils.JumpTo(LoadLinkManActivity.class);
-
+		IntentUtils.JumpTo(SearchActivity.class);
 	}
 
 	protected FragmentTopBarLayout setFragmentTopBarLayout() {

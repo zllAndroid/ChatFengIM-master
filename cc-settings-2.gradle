@@ -51,15 +51,21 @@ dependencies {
 
     //switchbutton
     implementation 'com.github.zcweng:switch-button:0.0.3@aar'
+    implementation 'com.example.zhouwei.library:library:1.0.0'
 
     implementation 'com.jude:easyrecyclerview:4.2.3'
+
+    //    Glide
+    implementation 'com.github.bumptech.glide:glide:3.7.0'
+    implementation 'jp.wasabeef:glide-transformations:2.0.1'
+
     //    eventbus
 //    implementation 'org.greenrobot:eventbus:3.1.1'
     //2018-06-03新增：这里是为了示例添加全局拦截器
     if (project.ext.has('runAsApp') && project.ext.runAsApp) {
         //说明：需要兼容的情况有3种(单独组件作为app运行、打包在主app内、组件在多个app上复用但全局拦截器不同)
         //     为了兼容以上3种情况，建议将全局拦截器作为一个单独的module，在此处给不同app添加不同拦截器module
-//        implementation project(':base_interceptor')
+        implementation project(':base_interceptor')
     }
 }
 //此文件是作为组件化配置的公共gradle脚本文件，在每个组件中都apply此文件，下载到工程根目录后，可以在下方添加一些自己工程中通用的配置

@@ -2,6 +2,7 @@ package com.mding.chatfeng.home.fragment.top_pop;
 
 import android.app.Activity;
 import android.content.Context;
+import android.content.Intent;
 import android.graphics.drawable.ColorDrawable;
 import android.util.DisplayMetrics;
 import android.view.LayoutInflater;
@@ -91,7 +92,9 @@ public class ConfirmPopWindow extends PopupWindow implements View.OnClickListene
 
         } else if (i == R.id.fp_tv_scan) {
 //            TODO 扫描
-//            IntentUtils.JumpTo(ScanCodeActivity.class);
+//            Intent intent = new Intent(context, ScanActivity.class);
+//            context.startActivity(intent);
+//            IntentUtils.JumpTo(ScanActivity.class);
 //                IntentUtils.JumpTo(ActivityScanerCode.class);
             dismiss();
 

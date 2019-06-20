@@ -19,7 +19,7 @@
         </activity>
 
         <!--<activity-->
-            <!--android:name="com.mding.chatfeng.home.ui.about_mine.about_changeinfo.ChangeInfoActivity"-->
+            <!--android:name="com.mding.chatfeng.home.ui.about_mine.ChangeInfoActivity"-->
             <!--android:launchMode="singleTop"-->
             <!--android:theme="@style/SwipeBack.Transparent.Theme"-->
             <!--android:windowSoftInputMode="adjustResize" />-->

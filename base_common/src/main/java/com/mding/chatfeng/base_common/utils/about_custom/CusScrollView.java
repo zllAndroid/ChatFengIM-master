@@ -1,4 +1,4 @@
-package com.mding.chatfeng.base_common.components.about_custom;
+package com.mding.chatfeng.base_common.utils.about_custom;
 
 import android.content.Context;
 import android.os.Handler;

@@ -209,7 +209,7 @@
             </RelativeLayout>
         </LinearLayout>
 
-        <com.mding.chatfeng.base_common.components.about_custom.LetterBar
+        <com.mding.chatfeng.base_common.utils.about_custom.LetterBar
             android:layout_height="wrap_content"
             android:layout_width="@dimen/dp30"
             android:id="@+id/group_team_letter"

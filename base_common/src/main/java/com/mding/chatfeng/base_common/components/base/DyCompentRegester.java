@@ -25,9 +25,6 @@ public abstract class DyCompentRegester extends  Activity{
     public DyCompentRegester() {
         addDynamicComponent();
     }
-
-
-
     protected void removeDynamicComponent() {
         if (loginUserObserverComponent != null) {
             //从CC框架中注销此动态组件
@@ -43,8 +40,6 @@ public abstract class DyCompentRegester extends  Activity{
             loginUserTextView.setText("");*/
         }
     }
-
-
 
     protected void addDynamicComponent() {
         if (loginUserObserverComponent == null) {

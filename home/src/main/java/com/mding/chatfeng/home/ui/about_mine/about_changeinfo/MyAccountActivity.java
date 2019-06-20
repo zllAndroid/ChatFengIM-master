@@ -8,7 +8,7 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.mding.chatfeng.base_common.components.base.BaseActivity;
-import com.mding.chatfeng.base_common.utils.about_main_utils.ZXingUtils;
+//import com.mding.chatfeng.base_common.utils.about_main_utils.ZXingUtils;
 import com.mding.chatfeng.base_common.utils.aboututils.ACache;
 import com.mding.chatfeng.home.R;
 
@@ -102,10 +102,10 @@ public class MyAccountActivity extends BaseActivity {
 //        }
 //    }
 
-    private void createQrCodeImg(String qrcode) {
-        Bitmap bitmap = ZXingUtils.createQRImage(qrcode, 300, 300);
-        Drawable drawable = new BitmapDrawable(bitmap);
-        qrcodeIvQrcode.setBackground(drawable);
-    }
+//    private void createQrCodeImg(String qrcode) {
+//        Bitmap bitmap = ZXingUtils.createQRImage(qrcode, 300, 300);
+//        Drawable drawable = new BitmapDrawable(bitmap);
+//        qrcodeIvQrcode.setBackground(drawable);
+//    }
 
 }

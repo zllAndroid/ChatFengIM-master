@@ -22,6 +22,9 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
+import com.billy.cc.core.component.CC;
+import com.billy.cc.core.component.CCResult;
+import com.billy.cc.core.component.IComponentCallback;
 import com.mding.chatfeng.base_common.AppConfig;
 import com.mding.chatfeng.base_common.components.base.BaseActivity;
 import com.mding.chatfeng.base_common.components.base.BaseApplication;
@@ -29,6 +32,8 @@ import com.mding.chatfeng.base_common.components.model.DataMyZiliao;
 import com.mding.chatfeng.base_common.components.model.DataSetHeadResult;
 import com.mding.chatfeng.base_common.components.model.HeadImgInfo;
 import com.mding.chatfeng.base_common.components.model.PersonInfo;
+import com.mding.chatfeng.base_common.request.body.PersonUserBody;
+import com.mding.chatfeng.base_common.request.create;
 import com.mding.chatfeng.base_common.utils.GsonParamConverter;
 import com.mding.chatfeng.base_common.utils.HeadFileUtils;
 import com.mding.chatfeng.base_common.utils.about_key.AppAllKey;
@@ -117,6 +122,13 @@ public class ChangeInfoActivity extends BaseActivity implements ChangeInfoWindow
 
 //            请求接口
 //            sendWeb(SplitWeb.getSplitWeb().personalCenter());
+            create.getComsApi().doCommon(create.person().controllersName,create.person().personalCenter,new PersonUserBody("","")).build().callAsync(new IComponentCallback() {
+                @Override
+                public void onResult(CC cc, CCResult result) {
+                    String  dataItem = result.getDataItem(cc.getActionName());
+
+                }
+            });
         }
     }
 
